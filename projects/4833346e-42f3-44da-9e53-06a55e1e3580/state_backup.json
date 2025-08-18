@@ -1,0 +1,17 @@
+{
+  "projectId": "4833346e-42f3-44da-9e53-06a55e1e3580",
+  "objective": "Create a simple HTML button with colorful CSS",
+  "createdAt": 1755549148.819761,
+  "updatedAt": 1755549148.819761,
+  "status": "planning",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": []
+}

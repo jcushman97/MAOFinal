@@ -1,0 +1,177 @@
+{
+  "projectId": "30f17dae-b59c-4712-97ea-50c253df3fa7",
+  "objective": "Create a simple red button with HTML and CSS",
+  "createdAt": 1755550333.625253,
+  "updatedAt": 1755550985.416664,
+  "status": "failed",
+  "tasks": [
+    {
+      "id": "html_1",
+      "description": "Create HTML button element with appropriate semantic markup",
+      "team": "frontend",
+      "status": "in_progress",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "css_1",
+      "description": "Style button with basic red background color",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "html_1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "css_2",
+      "description": "Add hover and active states for button interactivity",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "css_1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "test_1",
+      "description": "Test button appearance and interactions across browsers",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "css_2"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 574,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755550333.703828,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755550333.703828,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755550333.703828,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755550358.45186,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755550358.45186,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755550358.45286,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create HTML button element with appropriate semantic markup"
+    },
+    {
+      "timestamp": 1755550358.45286,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create HTML button element with appropriate semantic markup (team: frontend)"
+    },
+    {
+      "timestamp": 1755550358.45286,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Style button with basic red background color"
+    },
+    {
+      "timestamp": 1755550358.45286,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Style button with basic red background color (team: frontend)"
+    },
+    {
+      "timestamp": 1755550358.453861,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add hover and active states for button interactivity"
+    },
+    {
+      "timestamp": 1755550358.453861,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add hover and active states for button interactivity (team: frontend)"
+    },
+    {
+      "timestamp": 1755550358.453861,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test button appearance and interactions across browsers"
+    },
+    {
+      "timestamp": 1755550358.453861,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test button appearance and interactions across browsers (team: frontend)"
+    },
+    {
+      "timestamp": 1755550358.453861,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755550358.454862,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755550358.454862,
+      "level": "info",
+      "agent": "system",
+      "message": "Task html_1 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755550985.415663,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project resumed"
+    },
+    {
+      "timestamp": 1755550985.416664,
+      "level": "error",
+      "agent": "orchestrator",
+      "message": "Project failed to complete"
+    }
+  ]
+}

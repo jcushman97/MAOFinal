@@ -1,0 +1,354 @@
+{
+  "projectId": "b736e9ea-adc6-4b01-8465-9ab9da5d85da",
+  "objective": "Simple Colorful html website with simple js and css",
+  "createdAt": 1755547029.771358,
+  "updatedAt": 1755547858.021424,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "setup_01",
+      "description": "Create initial HTML structure with key elements and sections",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b736e9ea-adc6-4b01-8465-9ab9da5d85da\\artifacts\\setup_01_frontend_lead.txt"
+      ],
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "id": "style_01",
+      "description": "Design and implement colorful CSS styling with animations",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "setup_01"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b736e9ea-adc6-4b01-8465-9ab9da5d85da\\artifacts\\style_01_frontend_lead.txt"
+      ],
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "id": "js_01",
+      "description": "Add basic JavaScript interactivity and animations",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "setup_01"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b736e9ea-adc6-4b01-8465-9ab9da5d85da\\artifacts\\js_01_frontend_lead.txt"
+      ],
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "id": "test_01",
+      "description": "Test website responsiveness and browser compatibility",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "style_01",
+        "js_01"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b736e9ea-adc6-4b01-8465-9ab9da5d85da\\artifacts\\test_01_frontend_lead.txt"
+      ],
+      "attempts": 1,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 584,
+      "callCount": 1
+    },
+    "frontend_lead_b736e9ea": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 1696,
+      "callCount": 4
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755547029.804364,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755547029.805362,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755547029.805362,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755547051.633652,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755547051.63461,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755547051.63461,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create initial HTML structure with key elements and sections"
+    },
+    {
+      "timestamp": 1755547051.635611,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create initial HTML structure with key elements and sections (team: frontend)"
+    },
+    {
+      "timestamp": 1755547051.635611,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755547051.636667,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Design and implement colorful CSS styling with animations (team: frontend)"
+    },
+    {
+      "timestamp": 1755547051.637659,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add basic JavaScript interactivity and animations"
+    },
+    {
+      "timestamp": 1755547051.637659,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add basic JavaScript interactivity and animations (team: frontend)"
+    },
+    {
+      "timestamp": 1755547051.638735,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test website responsiveness and browser compatibility"
+    },
+    {
+      "timestamp": 1755547051.638735,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test website responsiveness and browser compatibility (team: frontend)"
+    },
+    {
+      "timestamp": 1755547051.639614,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755547051.64069,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755547051.641609,
+      "level": "info",
+      "agent": "system",
+      "message": "Task setup_01 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755547051.691702,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team Lead frontend executing: Create initial HTML structure with key elements and sections"
+    },
+    {
+      "timestamp": 1755547051.692697,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755547126.385403,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755547126.420138,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Saved team artifact: setup_01_frontend_lead.txt"
+    },
+    {
+      "timestamp": 1755547126.420138,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team task completed: Create initial HTML structure with key elements and sections"
+    },
+    {
+      "timestamp": 1755547126.421139,
+      "level": "info",
+      "agent": "system",
+      "message": "Task setup_01 status changed to complete"
+    },
+    {
+      "timestamp": 1755547126.467136,
+      "level": "info",
+      "agent": "system",
+      "message": "Task style_01 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755547126.510875,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team Lead frontend executing: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755547126.511865,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755547243.799994,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755547243.831949,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Saved team artifact: style_01_frontend_lead.txt"
+    },
+    {
+      "timestamp": 1755547243.833046,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team task completed: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755547243.833935,
+      "level": "info",
+      "agent": "system",
+      "message": "Task style_01 status changed to complete"
+    },
+    {
+      "timestamp": 1755547243.900808,
+      "level": "info",
+      "agent": "system",
+      "message": "Task js_01 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755547243.944833,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team Lead frontend executing: Add basic JavaScript interactivity and animations"
+    },
+    {
+      "timestamp": 1755547243.944833,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755547314.813159,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755547314.870106,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Saved team artifact: js_01_frontend_lead.txt"
+    },
+    {
+      "timestamp": 1755547314.870106,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team task completed: Add basic JavaScript interactivity and animations"
+    },
+    {
+      "timestamp": 1755547314.871109,
+      "level": "info",
+      "agent": "system",
+      "message": "Task js_01 status changed to complete"
+    },
+    {
+      "timestamp": 1755547314.910889,
+      "level": "info",
+      "agent": "system",
+      "message": "Task test_01 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755547314.952886,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team Lead frontend executing: Test website responsiveness and browser compatibility"
+    },
+    {
+      "timestamp": 1755547314.952886,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755547495.18921,
+      "level": "warning",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "LLM call failed (attempt 1): Model call failed: CLI command timed out after 180s"
+    },
+    {
+      "timestamp": 1755547676.30777,
+      "level": "warning",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "LLM call failed (attempt 2): Model call failed: CLI command timed out after 180s"
+    },
+    {
+      "timestamp": 1755547858.004361,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "LLM call successful (attempt 3)"
+    },
+    {
+      "timestamp": 1755547858.019366,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Saved team artifact: test_01_frontend_lead.txt"
+    },
+    {
+      "timestamp": 1755547858.020365,
+      "level": "info",
+      "agent": "frontend_lead_b736e9ea",
+      "message": "Team task completed: Test website responsiveness and browser compatibility"
+    },
+    {
+      "timestamp": 1755547858.020365,
+      "level": "info",
+      "agent": "system",
+      "message": "Task test_01 status changed to complete"
+    }
+  ]
+}

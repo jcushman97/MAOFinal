@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project {{ project.id[:8] }} - MAOS Dashboard</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1.5rem 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .breadcrumb a {
+            color: white;
+            text-decoration: none;
+            opacity: 0.8;
+        }
+
+        .breadcrumb a:hover {
+            opacity: 1;
+        }
+
+        .project-title {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .project-id {
+            font-family: monospace;
+            opacity: 0.8;
+            font-size: 0.9rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .project-info {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .info-item {
+            text-align: center;
+            padding: 1rem;
+            background: #f8f9fa;
+            border-radius: 8px;
+        }
+
+        .info-label {
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .info-value {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 0.8rem;
+        }
+
+        .status-planning { background: #fff3cd; color: #856404; }
+        .status-executing { background: #d4edda; color: #155724; }
+        .status-complete { background: #d1ecf1; color: #0c5460; }
+        .status-failed { background: #f8d7da; color: #721c24; }
+        .status-paused { background: #e2e3e5; color: #383d41; }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+
+        .section-header {
+            background: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title {
+            font-size: 1.3rem;
+            color: #333;
+        }
+
+        .task-columns {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+            padding: 1rem;
+        }
+
+        .task-column {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 1rem;
+        }
+
+        .column-header {
+            font-weight: bold;
+            margin-bottom: 1rem;
+            padding: 0.5rem;
+            text-align: center;
+            border-radius: 5px;
+            color: white;
+        }
+
+        .header-queued { background: #6c757d; }
+        .header-in-progress { background: #ffc107; color: #333; }
+        .header-complete { background: #28a745; }
+        .header-failed { background: #dc3545; }
+
+        .task-item {
+            background: white;
+            border-radius: 5px;
+            padding: 1rem;
+            margin-bottom: 0.5rem;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+
+        .task-description {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+
+        .task-meta {
+            font-size: 0.9rem;
+            color: #666;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+
+        .task-team {
+            background: #e9ecef;
+            padding: 0.25rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+        }
+
+        .task-dependencies, .task-artifacts {
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .error-message {
+            color: #dc3545;
+            background: #f8d7da;
+            padding: 0.5rem;
+            border-radius: 3px;
+            font-size: 0.8rem;
+            margin-top: 0.5rem;
+        }
+
+        .logs-section {
+            max-height: 400px;
+            overflow-y: auto;
+        }
+
+        .log-entry {
+            padding: 0.75rem 1.5rem;
+            border-bottom: 1px solid #eee;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+
+        .log-entry:last-child {
+            border-bottom: none;
+        }
+
+        .log-timestamp {
+            color: #666;
+            margin-right: 1rem;
+        }
+
+        .log-agent {
+            color: #007bff;
+            margin-right: 1rem;
+            font-weight: bold;
+        }
+
+        .log-level {
+            margin-right: 1rem;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-size: 0.7rem;
+            font-weight: bold;
+        }
+
+        .level-info { background: #d1ecf1; color: #0c5460; }
+        .level-warning { background: #fff3cd; color: #856404; }
+        .level-error { background: #f8d7da; color: #721c24; }
+
+        .back-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.5rem 1rem;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.2s;
+        }
+
+        .back-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="header-content">
+            <div>
+                <div class="breadcrumb">
+                    <a href="/" class="back-btn">← Dashboard</a>
+                </div>
+                <h1 class="project-title">{{ project.objective }}</h1>
+                <div class="project-id">Project ID: {{ project.id }}</div>
+            </div>
+            <span class="status-badge status-{{ project.status }}">{{ project.status }}</span>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="project-info">
+            <h2>Project Information</h2>
+            <div class="info-grid">
+                <div class="info-item">
+                    <div class="info-label">Status</div>
+                    <div class="info-value">{{ project.status | title }}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Total Tasks</div>
+                    <div class="info-value">{{ tasks.queued | length + tasks.in_progress | length + tasks.complete | length + tasks.failed | length }}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Completed</div>
+                    <div class="info-value">{{ tasks.complete | length }}</div>
+                </div>
+                <div class="info-item">
+                    <div class="info-label">Progress</div>
+                    {% set total_tasks = tasks.queued | length + tasks.in_progress | length + tasks.complete | length + tasks.failed | length %}
+                    {% set progress = (tasks.complete | length / total_tasks * 100) | round | int if total_tasks > 0 else 0 %}
+                    <div class="info-value">{{ progress }}%</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Tasks</h2>
+            </div>
+            <div class="task-columns">
+                <div class="task-column">
+                    <div class="column-header header-queued">
+                        Queued ({{ tasks.queued | length }})
+                    </div>
+                    {% for task in tasks.queued %}
+                    <div class="task-item">
+                        <div class="task-description">{{ task.description }}</div>
+                        <div class="task-meta">
+                            <span class="task-team">{{ task.team }}</span>
+                            <span>{{ task.id[:8] }}...</span>
+                        </div>
+                        {% if task.dependencies %}
+                        <div class="task-dependencies">
+                            <strong>Depends on:</strong> {{ task.dependencies | length }} tasks
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% if not tasks.queued %}
+                    <div style="text-align: center; padding: 2rem; color: #666;">No queued tasks</div>
+                    {% endif %}
+                </div>
+
+                <div class="task-column">
+                    <div class="column-header header-in-progress">
+                        In Progress ({{ tasks.in_progress | length }})
+                    </div>
+                    {% for task in tasks.in_progress %}
+                    <div class="task-item">
+                        <div class="task-description">{{ task.description }}</div>
+                        <div class="task-meta">
+                            <span class="task-team">{{ task.team }}</span>
+                            <span>Attempt {{ task.attempts }}</span>
+                        </div>
+                        {% if task.artifacts %}
+                        <div class="task-artifacts">
+                            <strong>Artifacts:</strong> {{ task.artifacts | length }} files
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% if not tasks.in_progress %}
+                    <div style="text-align: center; padding: 2rem; color: #666;">No tasks in progress</div>
+                    {% endif %}
+                </div>
+
+                <div class="task-column">
+                    <div class="column-header header-complete">
+                        Complete ({{ tasks.complete | length }})
+                    </div>
+                    {% for task in tasks.complete %}
+                    <div class="task-item">
+                        <div class="task-description">{{ task.description }}</div>
+                        <div class="task-meta">
+                            <span class="task-team">{{ task.team }}</span>
+                            <span>✓ Done</span>
+                        </div>
+                        {% if task.artifacts %}
+                        <div class="task-artifacts">
+                            <strong>Artifacts:</strong> {{ task.artifacts | length }} files
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% if not tasks.complete %}
+                    <div style="text-align: center; padding: 2rem; color: #666;">No completed tasks</div>
+                    {% endif %}
+                </div>
+
+                <div class="task-column">
+                    <div class="column-header header-failed">
+                        Failed ({{ tasks.failed | length }})
+                    </div>
+                    {% for task in tasks.failed %}
+                    <div class="task-item">
+                        <div class="task-description">{{ task.description }}</div>
+                        <div class="task-meta">
+                            <span class="task-team">{{ task.team }}</span>
+                            <span>{{ task.attempts }} attempts</span>
+                        </div>
+                        {% if task.error %}
+                        <div class="error-message">
+                            <strong>Error:</strong> {{ task.error }}
+                        </div>
+                        {% endif %}
+                    </div>
+                    {% endfor %}
+                    {% if not tasks.failed %}
+                    <div style="text-align: center; padding: 2rem; color: #666;">No failed tasks</div>
+                    {% endif %}
+                </div>
+            </div>
+        </div>
+
+        {% if logs %}
+        <div class="section">
+            <div class="section-header">
+                <h2 class="section-title">Recent Logs</h2>
+                <span>Last {{ logs | length }} entries</span>
+            </div>
+            <div class="logs-section">
+                {% for log in logs %}
+                <div class="log-entry">
+                    <span class="log-timestamp">{{ log.timestamp | int }}</span>
+                    <span class="log-agent">[{{ log.agent }}]</span>
+                    <span class="log-level level-{{ log.level }}">{{ log.level | upper }}</span>
+                    <span class="log-message">{{ log.message }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+
+    <script>
+        // Auto-refresh every 10 seconds for active projects
+        {% if project.status in ['planning', 'executing'] %}
+        setInterval(() => {
+            location.reload();
+        }, 10000);
+        {% endif %}
+    </script>
+</body>
+</html>

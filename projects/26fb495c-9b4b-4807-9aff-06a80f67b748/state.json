@@ -1,0 +1,245 @@
+{
+  "projectId": "26fb495c-9b4b-4807-9aff-06a80f67b748",
+  "objective": "Create a simple green button",
+  "createdAt": 1755552426.496756,
+  "updatedAt": 1755552492.172958,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create basic HTML button structure",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\26fb495c-9b4b-4807-9aff-06a80f67b748\\artifacts\\workers\\T1_html_specialist_fdccb1d0.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "T2",
+      "description": "Style button with green color and proper padding",
+      "team": "frontend",
+      "status": "in_progress",
+      "dependencies": [
+        "T1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "T3",
+      "description": "Add hover effects and transitions",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "T2"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "T4",
+      "description": "Test button appearance across browsers",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "T3"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 550,
+      "callCount": 1
+    },
+    "frontend_lead_26fb495c": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_specialist_fdccb1d0": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 157,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755552426.687208,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755552426.688193,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755552426.688193,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755552451.863832,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755552451.864844,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755552451.864844,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755552451.864844,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML button structure (team: frontend)"
+    },
+    {
+      "timestamp": 1755552451.864844,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Style button with green color and proper padding"
+    },
+    {
+      "timestamp": 1755552451.864844,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Style button with green color and proper padding (team: frontend)"
+    },
+    {
+      "timestamp": 1755552451.865828,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add hover effects and transitions"
+    },
+    {
+      "timestamp": 1755552451.865828,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add hover effects and transitions (team: frontend)"
+    },
+    {
+      "timestamp": 1755552451.865828,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test button appearance across browsers"
+    },
+    {
+      "timestamp": 1755552451.865828,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test button appearance across browsers (team: frontend)"
+    },
+    {
+      "timestamp": 1755552451.865828,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755552451.865828,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755552451.865828,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T1 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755552451.923828,
+      "level": "info",
+      "agent": "frontend_lead_26fb495c",
+      "message": "Team Lead frontend executing: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755552451.92482,
+      "level": "info",
+      "agent": "frontend_lead_26fb495c",
+      "message": "Team Lead delegating task to worker: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755552451.930898,
+      "level": "info",
+      "agent": "frontend_lead_26fb495c",
+      "message": "Created html_specialist worker for task: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755552451.930898,
+      "level": "info",
+      "agent": "worker_html_specialist_fdccb1d0",
+      "message": "Worker html_specialist executing: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755552451.931825,
+      "level": "info",
+      "agent": "worker_html_specialist_fdccb1d0",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755552492.004542,
+      "level": "info",
+      "agent": "worker_html_specialist_fdccb1d0",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755552492.0674,
+      "level": "info",
+      "agent": "worker_html_specialist_fdccb1d0",
+      "message": "Saved atomic result: T1_html_specialist_fdccb1d0.txt"
+    },
+    {
+      "timestamp": 1755552492.068356,
+      "level": "info",
+      "agent": "worker_html_specialist_fdccb1d0",
+      "message": "Atomic task completed in 40.14s: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755552492.068356,
+      "level": "info",
+      "agent": "frontend_lead_26fb495c",
+      "message": "Worker worker_html_specialist_fdccb1d0 completed task: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755552492.068356,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T1 status changed to complete"
+    },
+    {
+      "timestamp": 1755552492.172958,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T2 status changed to in_progress"
+    }
+  ]
+}

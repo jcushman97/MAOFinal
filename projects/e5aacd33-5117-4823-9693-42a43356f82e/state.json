@@ -1,0 +1,207 @@
+{
+  "projectId": "e5aacd33-5117-4823-9693-42a43356f82e",
+  "objective": "Create a simple blue button with hover effects",
+  "createdAt": 1755552286.55419,
+  "updatedAt": 1755552309.670026,
+  "status": "failed",
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create HTML button structure",
+      "team": "frontend",
+      "status": "failed",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 1,
+      "error": "Task execution failed"
+    },
+    {
+      "id": "T2",
+      "description": "Style button with blue color and base CSS",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "T1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "T3",
+      "description": "Implement hover effects with CSS transitions",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "T2"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "T4",
+      "description": "Test button appearance and hover behavior across browsers",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "T3"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 558,
+      "callCount": 1
+    },
+    "frontend_lead_e5aacd33": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_specialist_d08d475b": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755552286.660582,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755552286.660582,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755552286.660582,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755552309.487583,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755552309.488573,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755552309.488573,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create HTML button structure"
+    },
+    {
+      "timestamp": 1755552309.488573,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create HTML button structure (team: frontend)"
+    },
+    {
+      "timestamp": 1755552309.488573,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Style button with blue color and base CSS"
+    },
+    {
+      "timestamp": 1755552309.488573,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Style button with blue color and base CSS (team: frontend)"
+    },
+    {
+      "timestamp": 1755552309.488573,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Implement hover effects with CSS transitions"
+    },
+    {
+      "timestamp": 1755552309.488573,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Implement hover effects with CSS transitions (team: frontend)"
+    },
+    {
+      "timestamp": 1755552309.489574,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test button appearance and hover behavior across browsers"
+    },
+    {
+      "timestamp": 1755552309.489574,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test button appearance and hover behavior across browsers (team: frontend)"
+    },
+    {
+      "timestamp": 1755552309.489574,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755552309.489574,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755552309.489574,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T1 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755552309.536341,
+      "level": "info",
+      "agent": "frontend_lead_e5aacd33",
+      "message": "Team Lead frontend executing: Create HTML button structure"
+    },
+    {
+      "timestamp": 1755552309.536341,
+      "level": "info",
+      "agent": "frontend_lead_e5aacd33",
+      "message": "Team Lead delegating task to worker: Create HTML button structure"
+    },
+    {
+      "timestamp": 1755552309.620483,
+      "level": "error",
+      "agent": "frontend_lead_e5aacd33",
+      "message": "Worker delegation failed: name 'LogLevel' is not defined"
+    },
+    {
+      "timestamp": 1755552309.620483,
+      "level": "error",
+      "agent": "system",
+      "message": "Task T1 status changed to failed"
+    },
+    {
+      "timestamp": 1755552309.670026,
+      "level": "error",
+      "agent": "orchestrator",
+      "message": "Project failed to complete"
+    }
+  ]
+}

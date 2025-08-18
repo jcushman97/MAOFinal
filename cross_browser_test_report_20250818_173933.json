@@ -1,0 +1,402 @@
+{
+  "timestamp": "2025-08-18T17:38:19.479097",
+  "base_url": "http://localhost:8080",
+  "browsers": {
+    "chromium": {
+      "browser": "chromium",
+      "tests": {
+        "page_load": {
+          "load_time": 0.245711,
+          "status_code": 200,
+          "loaded": true,
+          "title": "Colorful Website",
+          "structure": {
+            "has_nav": true,
+            "has_main": true,
+            "has_footer": true
+          },
+          "console_errors": []
+        },
+        "javascript": {
+          "smooth_scroll": {
+            "working": true,
+            "error": null
+          },
+          "form_validation": {
+            "working": true,
+            "error": null
+          },
+          "button_interactions": {
+            "working": false,
+            "button_count": 0,
+            "error": "No buttons found"
+          }
+        },
+        "accessibility": {
+          "aria_attributes": {
+            "nav_labeled": true,
+            "main_role": true,
+            "form_role": true
+          },
+          "form_labels": {
+            "total_inputs": 2,
+            "labeled_inputs": 2
+          },
+          "heading_structure": [
+            {
+              "tag": "H1",
+              "text": "Welcome to Our Colorful World",
+              "id": "home-title"
+            },
+            {
+              "tag": "H2",
+              "text": "About Us",
+              "id": "about-title"
+            },
+            {
+              "tag": "H2",
+              "text": "Color Gallery",
+              "id": "gallery-title"
+            },
+            {
+              "tag": "H2",
+              "text": "Contact Us",
+              "id": "contact-title"
+            }
+          ]
+        },
+        "responsive": {
+          "desktop": {
+            "nav_visible": true,
+            "content_width": 1920,
+            "viewport_width": 1920,
+            "responsive_ratio": 1.0
+          },
+          "tablet_landscape": {
+            "nav_visible": true,
+            "content_width": 1024,
+            "viewport_width": 1024,
+            "responsive_ratio": 1.0
+          },
+          "tablet_portrait": {
+            "nav_visible": true,
+            "content_width": 768,
+            "viewport_width": 768,
+            "responsive_ratio": 1.0
+          },
+          "mobile": {
+            "nav_visible": true,
+            "content_width": 375,
+            "viewport_width": 375,
+            "responsive_ratio": 1.0
+          }
+        },
+        "forms": {
+          "form_filling": {
+            "name_filled": true,
+            "email_filled": true,
+            "message_filled": true
+          },
+          "form_working": true
+        }
+      },
+      "screenshots": [
+        {
+          "viewport": {
+            "width": 1920,
+            "height": 1080,
+            "name": "desktop"
+          },
+          "path": "screenshots/chromium_desktop.png"
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024,
+            "name": "tablet"
+          },
+          "path": "screenshots/chromium_tablet.png"
+        },
+        {
+          "viewport": {
+            "width": 375,
+            "height": 667,
+            "name": "mobile"
+          },
+          "path": "screenshots/chromium_mobile.png"
+        }
+      ],
+      "performance": {
+        "dom_loading": NaN,
+        "page_load": NaN,
+        "first_paint": 0,
+        "first_contentful_paint": 0
+      },
+      "errors": []
+    },
+    "firefox": {
+      "browser": "firefox",
+      "tests": {
+        "page_load": {
+          "load_time": 0.575972,
+          "status_code": 200,
+          "loaded": true,
+          "title": "Colorful Website",
+          "structure": {
+            "has_nav": true,
+            "has_main": true,
+            "has_footer": true
+          },
+          "console_errors": []
+        },
+        "javascript": {
+          "smooth_scroll": {
+            "working": true,
+            "error": null
+          },
+          "form_validation": {
+            "working": true,
+            "error": null
+          },
+          "button_interactions": {
+            "working": false,
+            "button_count": 0,
+            "error": "No buttons found"
+          }
+        },
+        "accessibility": {
+          "aria_attributes": {
+            "nav_labeled": true,
+            "main_role": true,
+            "form_role": true
+          },
+          "form_labels": {
+            "total_inputs": 2,
+            "labeled_inputs": 2
+          },
+          "heading_structure": [
+            {
+              "tag": "H1",
+              "text": "Welcome to Our Colorful World",
+              "id": "home-title"
+            },
+            {
+              "tag": "H2",
+              "text": "About Us",
+              "id": "about-title"
+            },
+            {
+              "tag": "H2",
+              "text": "Color Gallery",
+              "id": "gallery-title"
+            },
+            {
+              "tag": "H2",
+              "text": "Contact Us",
+              "id": "contact-title"
+            }
+          ]
+        },
+        "responsive": {
+          "desktop": {
+            "nav_visible": true,
+            "content_width": 1920,
+            "viewport_width": 1920,
+            "responsive_ratio": 1.0
+          },
+          "tablet_landscape": {
+            "nav_visible": true,
+            "content_width": 1024,
+            "viewport_width": 1024,
+            "responsive_ratio": 1.0
+          },
+          "tablet_portrait": {
+            "nav_visible": true,
+            "content_width": 768,
+            "viewport_width": 768,
+            "responsive_ratio": 1.0
+          },
+          "mobile": {
+            "nav_visible": true,
+            "content_width": 375,
+            "viewport_width": 375,
+            "responsive_ratio": 1.0
+          }
+        },
+        "forms": {
+          "form_filling": {
+            "name_filled": true,
+            "email_filled": true,
+            "message_filled": true
+          },
+          "form_working": true
+        }
+      },
+      "screenshots": [
+        {
+          "viewport": {
+            "width": 1920,
+            "height": 1080,
+            "name": "desktop"
+          },
+          "path": "screenshots/firefox_desktop.png"
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024,
+            "name": "tablet"
+          },
+          "path": "screenshots/firefox_tablet.png"
+        },
+        {
+          "viewport": {
+            "width": 375,
+            "height": 667,
+            "name": "mobile"
+          },
+          "path": "screenshots/firefox_mobile.png"
+        }
+      ],
+      "performance": {
+        "dom_loading": NaN,
+        "page_load": NaN,
+        "first_paint": 0,
+        "first_contentful_paint": 45
+      },
+      "errors": []
+    },
+    "webkit": {
+      "browser": "webkit",
+      "tests": {
+        "page_load": {
+          "load_time": 0.284856,
+          "status_code": 200,
+          "loaded": true,
+          "title": "Colorful Website",
+          "structure": {
+            "has_nav": true,
+            "has_main": true,
+            "has_footer": true
+          },
+          "console_errors": []
+        },
+        "javascript": {
+          "smooth_scroll": {
+            "working": true,
+            "error": null
+          },
+          "form_validation": {
+            "working": true,
+            "error": null
+          },
+          "button_interactions": {
+            "working": false,
+            "button_count": 0,
+            "error": "No buttons found"
+          }
+        },
+        "accessibility": {
+          "aria_attributes": {
+            "nav_labeled": true,
+            "main_role": true,
+            "form_role": true
+          },
+          "form_labels": {
+            "total_inputs": 2,
+            "labeled_inputs": 2
+          },
+          "heading_structure": [
+            {
+              "tag": "H1",
+              "text": "Welcome to Our Colorful World",
+              "id": "home-title"
+            },
+            {
+              "tag": "H2",
+              "text": "About Us",
+              "id": "about-title"
+            },
+            {
+              "tag": "H2",
+              "text": "Color Gallery",
+              "id": "gallery-title"
+            },
+            {
+              "tag": "H2",
+              "text": "Contact Us",
+              "id": "contact-title"
+            }
+          ]
+        },
+        "responsive": {
+          "desktop": {
+            "nav_visible": true,
+            "content_width": 1920,
+            "viewport_width": 1920,
+            "responsive_ratio": 1.0
+          },
+          "tablet_landscape": {
+            "nav_visible": true,
+            "content_width": 1024,
+            "viewport_width": 1024,
+            "responsive_ratio": 1.0
+          },
+          "tablet_portrait": {
+            "nav_visible": true,
+            "content_width": 768,
+            "viewport_width": 768,
+            "responsive_ratio": 1.0
+          },
+          "mobile": {
+            "nav_visible": true,
+            "content_width": 375,
+            "viewport_width": 375,
+            "responsive_ratio": 1.0
+          }
+        },
+        "forms": {
+          "form_filling": {
+            "name_filled": true,
+            "email_filled": true,
+            "message_filled": true
+          },
+          "form_working": true
+        }
+      },
+      "screenshots": [
+        {
+          "viewport": {
+            "width": 1920,
+            "height": 1080,
+            "name": "desktop"
+          },
+          "path": "screenshots/webkit_desktop.png"
+        },
+        {
+          "viewport": {
+            "width": 768,
+            "height": 1024,
+            "name": "tablet"
+          },
+          "path": "screenshots/webkit_tablet.png"
+        },
+        {
+          "viewport": {
+            "width": 375,
+            "height": 667,
+            "name": "mobile"
+          },
+          "path": "screenshots/webkit_mobile.png"
+        }
+      ],
+      "performance": {
+        "dom_loading": NaN,
+        "page_load": NaN,
+        "first_paint": 0,
+        "first_contentful_paint": 36.00000000000001
+      },
+      "errors": []
+    }
+  }
+}

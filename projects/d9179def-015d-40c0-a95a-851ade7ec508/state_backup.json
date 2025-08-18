@@ -1,0 +1,17 @@
+{
+  "projectId": "d9179def-015d-40c0-a95a-851ade7ec508",
+  "objective": "Simple test project 2",
+  "createdAt": 1755546684.561732,
+  "updatedAt": 1755546684.561732,
+  "status": "planning",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": []
+}

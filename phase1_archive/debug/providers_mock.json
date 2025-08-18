@@ -1,0 +1,20 @@
+{
+  "slots": {
+    "claude": {
+      "cmd": ["python", "wrappers/mock_claude_wrapper.py"],
+      "extra_args": ["--model", "claude-3-5-sonnet-20241022"],
+      "json_markers": ["BEGIN_JSON", "END_JSON"],
+      "timeout": 300,
+      "max_retries": 3
+    }
+  },
+  "routing": {
+    "plan": "claude",
+    "python": "claude",
+    "backend": "claude", 
+    "frontend": "claude",
+    "research": "claude",
+    "documentation": "claude",
+    "general": "claude"
+  }
+}

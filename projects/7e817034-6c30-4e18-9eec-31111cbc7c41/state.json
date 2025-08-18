@@ -1,0 +1,191 @@
+{
+  "projectId": "7e817034-6c30-4e18-9eec-31111cbc7c41",
+  "objective": "Create a simple colorful website with HTML and CSS",
+  "createdAt": 1755546847.395253,
+  "updatedAt": 1755546873.025309,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "setup_1",
+      "description": "Create initial HTML structure with basic elements",
+      "team": "frontend",
+      "status": "in_progress",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "content_1",
+      "description": "Add main content sections and text",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "setup_1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "style_1",
+      "description": "Create CSS file and implement basic styling",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "setup_1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "style_2",
+      "description": "Add color schemes and visual enhancements",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "style_1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "test_1",
+      "description": "Test website across different browsers and screen sizes",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "content_1",
+        "style_2"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 630,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755546847.445245,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755546847.445245,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755546847.445245,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755546873.02431,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755546873.02431,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create initial HTML structure with basic elements"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create initial HTML structure with basic elements (team: frontend)"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add main content sections and text"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add main content sections and text (team: frontend)"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create CSS file and implement basic styling"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create CSS file and implement basic styling (team: frontend)"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add color schemes and visual enhancements"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add color schemes and visual enhancements (team: frontend)"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test website across different browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test website across different browsers and screen sizes (team: frontend)"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755546873.025309,
+      "level": "info",
+      "agent": "system",
+      "message": "Task setup_1 status changed to in_progress"
+    }
+  ]
+}

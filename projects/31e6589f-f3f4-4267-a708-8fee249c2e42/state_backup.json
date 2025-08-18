@@ -1,0 +1,215 @@
+{
+  "projectId": "31e6589f-f3f4-4267-a708-8fee249c2e42",
+  "objective": "Create a simple red button",
+  "createdAt": 1755551815.788309,
+  "updatedAt": 1755551882.977518,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "t1",
+      "description": "Create basic HTML button structure",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\31e6589f-f3f4-4267-a708-8fee249c2e42\\artifacts\\t1_frontend_lead.txt"
+      ],
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "id": "t2",
+      "description": "Style button with red color and hover effects",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "t1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "t3",
+      "description": "Add click state and accessibility attributes",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "t2"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "t4",
+      "description": "Test button across browsers and screen sizes",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "t3"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 552,
+      "callCount": 1
+    },
+    "frontend_lead_31e6589f": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 418,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755551815.830982,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755551815.830982,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755551815.830982,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755551840.16869,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755551840.170222,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755551840.170222,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755551840.170222,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML button structure (team: frontend)"
+    },
+    {
+      "timestamp": 1755551840.170222,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Style button with red color and hover effects"
+    },
+    {
+      "timestamp": 1755551840.170222,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Style button with red color and hover effects (team: frontend)"
+    },
+    {
+      "timestamp": 1755551840.170222,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add click state and accessibility attributes"
+    },
+    {
+      "timestamp": 1755551840.170222,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add click state and accessibility attributes (team: frontend)"
+    },
+    {
+      "timestamp": 1755551840.171257,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test button across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755551840.171257,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test button across browsers and screen sizes (team: frontend)"
+    },
+    {
+      "timestamp": 1755551840.171257,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755551840.171257,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755551840.171257,
+      "level": "info",
+      "agent": "system",
+      "message": "Task t1 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755551840.22311,
+      "level": "info",
+      "agent": "frontend_lead_31e6589f",
+      "message": "Team Lead frontend executing: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755551840.22311,
+      "level": "info",
+      "agent": "frontend_lead_31e6589f",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755551882.967864,
+      "level": "info",
+      "agent": "frontend_lead_31e6589f",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755551882.977518,
+      "level": "info",
+      "agent": "frontend_lead_31e6589f",
+      "message": "Team deliverable processing completed for task t1"
+    },
+    {
+      "timestamp": 1755551882.977518,
+      "level": "info",
+      "agent": "frontend_lead_31e6589f",
+      "message": "Saved team artifact: t1_frontend_lead.txt"
+    },
+    {
+      "timestamp": 1755551882.977518,
+      "level": "info",
+      "agent": "frontend_lead_31e6589f",
+      "message": "Team task completed: Create basic HTML button structure"
+    },
+    {
+      "timestamp": 1755551882.977518,
+      "level": "info",
+      "agent": "system",
+      "message": "Task t1 status changed to complete"
+    }
+  ]
+}

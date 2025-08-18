@@ -1,0 +1,140 @@
+{
+  "projectId": "844d55ad-45dd-45e5-ac10-c5cdf6dc7efd",
+  "objective": "Simple test project 3",
+  "createdAt": 1755546768.419429,
+  "updatedAt": 1755546790.230319,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "INIT-1",
+      "description": "Initial project setup and requirements analysis",
+      "team": "general",
+      "status": "in_progress",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "PLAN-1",
+      "description": "Create detailed project plan and timeline",
+      "team": "general",
+      "status": "queued",
+      "dependencies": [
+        "INIT-1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "TEST-1",
+      "description": "Conduct simple test validation",
+      "team": "general",
+      "status": "queued",
+      "dependencies": [
+        "PLAN-1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 492,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755546768.474956,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755546768.475957,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755546768.475957,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755546790.229304,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755546790.229304,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: other (simple complexity)"
+    },
+    {
+      "timestamp": 1755546790.229304,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Initial project setup and requirements analysis"
+    },
+    {
+      "timestamp": 1755546790.229304,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Initial project setup and requirements analysis (team: general)"
+    },
+    {
+      "timestamp": 1755546790.229304,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create detailed project plan and timeline"
+    },
+    {
+      "timestamp": 1755546790.230319,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create detailed project plan and timeline (team: general)"
+    },
+    {
+      "timestamp": 1755546790.230319,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Conduct simple test validation"
+    },
+    {
+      "timestamp": 1755546790.230319,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Conduct simple test validation (team: general)"
+    },
+    {
+      "timestamp": 1755546790.230319,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755546790.230319,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755546790.230319,
+      "level": "info",
+      "agent": "system",
+      "message": "Task INIT-1 status changed to in_progress"
+    }
+  ]
+}

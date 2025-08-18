@@ -1,0 +1,394 @@
+{
+  "projectId": "1a27a5e8-647f-4f41-9ba3-6f701046de97",
+  "objective": "Simple Colorful html website with simple js and css",
+  "createdAt": 1755552661.443889,
+  "updatedAt": 1755552838.666539,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "task1",
+      "description": "Create basic HTML structure with placeholder content",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\1a27a5e8-647f-4f41-9ba3-6f701046de97\\artifacts\\workers\\task1_html_specialist_300f3a8d.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "task2",
+      "description": "Implement colorful CSS styling with animations",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "task1"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\1a27a5e8-647f-4f41-9ba3-6f701046de97\\artifacts\\workers\\task2_css_specialist_6e39085e.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "task3",
+      "description": "Add interactive JavaScript features for user engagement",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "task1"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\1a27a5e8-647f-4f41-9ba3-6f701046de97\\artifacts\\workers\\task3_javascript_specialist_7e796af6.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "task4",
+      "description": "Test website across browsers and fix any issues",
+      "team": "frontend",
+      "status": "in_progress",
+      "dependencies": [
+        "task2",
+        "task3"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 575,
+      "callCount": 1
+    },
+    "frontend_lead_1a27a5e8": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_specialist_300f3a8d": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 168,
+      "callCount": 1
+    },
+    "worker_css_specialist_6e39085e": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 151,
+      "callCount": 1
+    },
+    "worker_javascript_specialist_7e796af6": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 155,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755552661.521403,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755552661.521403,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755552661.522402,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755552689.927301,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755552689.928298,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755552689.928298,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML structure with placeholder content"
+    },
+    {
+      "timestamp": 1755552689.929293,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML structure with placeholder content (team: frontend)"
+    },
+    {
+      "timestamp": 1755552689.930286,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755552689.930286,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Implement colorful CSS styling with animations (team: frontend)"
+    },
+    {
+      "timestamp": 1755552689.931299,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add interactive JavaScript features for user engagement"
+    },
+    {
+      "timestamp": 1755552689.931299,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add interactive JavaScript features for user engagement (team: frontend)"
+    },
+    {
+      "timestamp": 1755552689.932345,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test website across browsers and fix any issues"
+    },
+    {
+      "timestamp": 1755552689.933394,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test website across browsers and fix any issues (team: frontend)"
+    },
+    {
+      "timestamp": 1755552689.933394,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755552689.934368,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755552689.935289,
+      "level": "info",
+      "agent": "system",
+      "message": "Task task1 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755552690.083475,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Team Lead frontend executing: Create basic HTML structure with placeholder content"
+    },
+    {
+      "timestamp": 1755552690.083475,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Team Lead delegating task to worker: Create basic HTML structure with placeholder content"
+    },
+    {
+      "timestamp": 1755552690.089441,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Created html_specialist worker for task: Create basic HTML structure with placeholder content"
+    },
+    {
+      "timestamp": 1755552690.090427,
+      "level": "info",
+      "agent": "worker_html_specialist_300f3a8d",
+      "message": "Worker html_specialist executing: Create basic HTML structure with placeholder content"
+    },
+    {
+      "timestamp": 1755552690.091412,
+      "level": "info",
+      "agent": "worker_html_specialist_300f3a8d",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755552738.428297,
+      "level": "info",
+      "agent": "worker_html_specialist_300f3a8d",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755552738.448279,
+      "level": "info",
+      "agent": "worker_html_specialist_300f3a8d",
+      "message": "Saved atomic result: task1_html_specialist_300f3a8d.txt"
+    },
+    {
+      "timestamp": 1755552738.449289,
+      "level": "info",
+      "agent": "worker_html_specialist_300f3a8d",
+      "message": "Atomic task completed in 48.36s: Create basic HTML structure with placeholder content"
+    },
+    {
+      "timestamp": 1755552738.45028,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Worker worker_html_specialist_300f3a8d completed task: Create basic HTML structure with placeholder content"
+    },
+    {
+      "timestamp": 1755552738.45028,
+      "level": "info",
+      "agent": "system",
+      "message": "Task task1 status changed to complete"
+    },
+    {
+      "timestamp": 1755552738.50974,
+      "level": "info",
+      "agent": "system",
+      "message": "Task task2 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755552738.573748,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Team Lead frontend executing: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755552738.574872,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Team Lead delegating task to worker: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755552738.576893,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Created css_specialist worker for task: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755552738.5779,
+      "level": "info",
+      "agent": "worker_css_specialist_6e39085e",
+      "message": "Worker css_specialist executing: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755552738.5779,
+      "level": "info",
+      "agent": "worker_css_specialist_6e39085e",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755552803.285406,
+      "level": "info",
+      "agent": "worker_css_specialist_6e39085e",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755552803.303412,
+      "level": "info",
+      "agent": "worker_css_specialist_6e39085e",
+      "message": "Saved atomic result: task2_css_specialist_6e39085e.txt"
+    },
+    {
+      "timestamp": 1755552803.304345,
+      "level": "info",
+      "agent": "worker_css_specialist_6e39085e",
+      "message": "Atomic task completed in 64.73s: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755552803.304345,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Worker worker_css_specialist_6e39085e completed task: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755552803.305304,
+      "level": "info",
+      "agent": "system",
+      "message": "Task task2 status changed to complete"
+    },
+    {
+      "timestamp": 1755552803.37401,
+      "level": "info",
+      "agent": "system",
+      "message": "Task task3 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755552803.431197,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Team Lead frontend executing: Add interactive JavaScript features for user engagement"
+    },
+    {
+      "timestamp": 1755552803.43214,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Team Lead delegating task to worker: Add interactive JavaScript features for user engagement"
+    },
+    {
+      "timestamp": 1755552803.434238,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Created javascript_specialist worker for task: Add interactive JavaScript features for user engagement"
+    },
+    {
+      "timestamp": 1755552803.434238,
+      "level": "info",
+      "agent": "worker_javascript_specialist_7e796af6",
+      "message": "Worker javascript_specialist executing: Add interactive JavaScript features for user engagement"
+    },
+    {
+      "timestamp": 1755552803.435139,
+      "level": "info",
+      "agent": "worker_javascript_specialist_7e796af6",
+      "message": "Calling claude for general task"
+    },
+    {
+      "timestamp": 1755552838.583421,
+      "level": "info",
+      "agent": "worker_javascript_specialist_7e796af6",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755552838.607652,
+      "level": "info",
+      "agent": "worker_javascript_specialist_7e796af6",
+      "message": "Saved atomic result: task3_javascript_specialist_7e796af6.txt"
+    },
+    {
+      "timestamp": 1755552838.608655,
+      "level": "info",
+      "agent": "worker_javascript_specialist_7e796af6",
+      "message": "Atomic task completed in 35.17s: Add interactive JavaScript features for user engagement"
+    },
+    {
+      "timestamp": 1755552838.608655,
+      "level": "info",
+      "agent": "frontend_lead_1a27a5e8",
+      "message": "Worker worker_javascript_specialist_7e796af6 completed task: Add interactive JavaScript features for user engagement"
+    },
+    {
+      "timestamp": 1755552838.609665,
+      "level": "info",
+      "agent": "system",
+      "message": "Task task3 status changed to complete"
+    },
+    {
+      "timestamp": 1755552838.666539,
+      "level": "info",
+      "agent": "system",
+      "message": "Task task4 status changed to in_progress"
+    }
+  ]
+}

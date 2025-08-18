@@ -1,0 +1,179 @@
+SYSTEM ARCHITECTURE OVERVIEW
+The Multi-Agent Orchestration System follows a hierarchical, event-driven architecture with clear separation of concerns across multiple layers.
+ARCHITECTURAL PRINCIPLES
+Hierarchical Command Structure
+Clear chain of command from PM to Workers
+Each level has defined responsibilities
+No peer-to-peer communication between workers
+Model Specialization
+Each LLM used for its strengths
+Dynamic routing based on task requirements
+Fallback chains for reliability
+Context Isolation
+Agents only receive necessary context
+Context summarization at boundaries
+Token budget management per agent
+State-Driven Execution
+All state changes persisted immediately
+Resumable from any point
+Complete audit trail
+SYSTEM LAYERS
+Orchestration Layer Components:
+Orchestrator: Main control loop
+State Manager: Persistence and recovery
+Router: Task to model mapping
+Responsibilities:
+Project lifecycle management
+Task scheduling and dependency resolution
+State persistence and recovery
+Error handling and retries
+Agent Layer Project Manager Agent:
+Decomposes objectives into task DAG
+Assigns tasks to teams
+Monitors overall progress
+Integrates final outputs
+Team Lead Agents:
+Expand team tasks into subtasks
+Assign work to specialists
+Validate outputs
+Report to PM
+Worker Agents:
+Execute specific tasks
+Generate artifacts
+Follow strict instructions
+Return structured outputs
+Provider Layer CLI Client:
+Handles subprocess communication
+Manages timeouts and retries
+Extracts structured outputs
+Error detection and reporting
+Wrapper Scripts:
+Handle interactive CLI tools
+Platform-specific implementations
+Input/output transformation
+Fallback mechanisms
+Storage Layer State Store:
+JSON-based persistence
+Atomic write operations
+Versioning support
+Corruption detection
+Artifact Store:
+File-based storage
+Hierarchical organization
+Metadata tracking
+Cleanup policies
+Interface Layer CLI Interface:
+Command-line entry point
+Progress reporting
+Error display
+Result presentation
+Web Dashboard:
+Real-time status updates
+Hierarchy visualization
+Task progress tracking
+Artifact browsing
+DATA FLOW
+Input Processing User Input -> CLI -> Orchestrator -> PM Agent
+Planning Phase PM Agent -> Task DAG -> State Store
+Execution Phase Orchestrator -> Team Lead -> Worker -> Artifact
+State Updates Every Action -> State Store -> Dashboard
+Output Assembly Artifacts -> PM Agent -> Final Output
+AGENT COMMUNICATION PROTOCOL
+Request Format:
+{
+"agent_id": "string",
+"task_id": "string",
+"type": "plan|expand|execute",
+"input": "string or object",
+"context": {
+"project_objective": "string",
+"dependencies": ["task_ids"],
+"constraints": {}
+}
+}
+Response Format:
+{
+"agent_id": "string",
+"task_id": "string",
+"status": "success|failure",
+"output": "string or object",
+"artifacts": ["paths"],
+"metadata": {
+"tokens_used": "number",
+"execution_time": "number",
+"model_used": "string"
+}
+}
+STATE SCHEMA
+{
+"projectId": "uuid",
+"objective": "string",
+"createdAt": "timestamp",
+"updatedAt": "timestamp",
+"status": "planning|executing|paused|complete|failed",
+"tasks": [
+{
+"id": "string",
+"description": "string",
+"team": "string",
+"status": "queued|in_progress|complete|failed",
+"dependencies": ["task_ids"],
+"subtasks": [...],
+"artifacts": ["paths"],
+"attempts": "number",
+"error": "string or null"
+}
+],
+"agents": {
+"agent_id": {
+"type": "pm|lead|worker",
+"model": "string",
+"tokensUsed": "number",
+"callCount": "number"
+}
+},
+"logs": [
+{
+"timestamp": "number",
+"level": "info|warning|error",
+"agent": "string",
+"message": "string"
+}
+]
+}
+ERROR HANDLING STRATEGY
+Transient Failures
+Automatic retry with exponential backoff
+Maximum 3 attempts per task
+Model fallback on repeated failures
+Permanent Failures
+Task marked as failed
+Added to dead letter queue
+Manual intervention required
+Project continues if possible
+Context Overflow
+Automatic summarization triggered
+Context pruning of completed tasks
+Warning logged for user
+Model Unavailability
+Fallback to alternative model
+Queue task for later if no alternative
+Notify user of degraded mode
+SCALABILITY CONSIDERATIONS
+Current Limitations:
+Single machine execution
+Sequential task processing
+Memory-bound state storage
+CLI subprocess overhead
+Future Scaling:
+Distributed agent execution
+Parallel task processing
+Database-backed state
+API-based model access
+SECURITY MODEL
+No network access required
+Local file system only
+No automatic code execution
+Sanitized file paths
+Wrapped CLI execution
+No credential storage

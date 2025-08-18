@@ -1,0 +1,7 @@
+Task: Create basic HTML button structure
+Worker: worker_html_specialist_fdccb1d0
+Specialty: html_specialist
+Team: frontend
+Generated: 1755552492.004542
+--------------------------------------------------
+Execution error

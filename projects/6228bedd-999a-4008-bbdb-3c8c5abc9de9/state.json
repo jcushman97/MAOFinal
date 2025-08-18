@@ -1,0 +1,184 @@
+{
+  "projectId": "6228bedd-999a-4008-bbdb-3c8c5abc9de9",
+  "objective": "Create a simple hello world Python script",
+  "createdAt": 1755541909.934861,
+  "updatedAt": 1755541990.268892,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create project directory structure",
+      "team": "general",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\6228bedd-999a-4008-bbdb-3c8c5abc9de9\\artifacts\\T1_general.txt"
+      ],
+      "attempts": 1,
+      "error": null
+    },
+    {
+      "id": "T2",
+      "description": "Write Python hello world script",
+      "team": "backend",
+      "status": "in_progress",
+      "dependencies": [
+        "T1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "T3",
+      "description": "Test script execution",
+      "team": "backend",
+      "status": "queued",
+      "dependencies": [
+        "T2"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 683,
+      "callCount": 2
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755541910.007968,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755541910.007968,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755541910.007968,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755541938.742623,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755541938.742623,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: other (simple complexity)"
+    },
+    {
+      "timestamp": 1755541938.743727,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create project directory structure"
+    },
+    {
+      "timestamp": 1755541938.743727,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create project directory structure (team: general)"
+    },
+    {
+      "timestamp": 1755541938.744745,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Write Python hello world script"
+    },
+    {
+      "timestamp": 1755541938.744745,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Write Python hello world script (team: backend)"
+    },
+    {
+      "timestamp": 1755541938.744745,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test script execution"
+    },
+    {
+      "timestamp": 1755541938.744745,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test script execution (team: backend)"
+    },
+    {
+      "timestamp": 1755541938.745729,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755541938.745729,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755541938.746626,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T1 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755541938.796726,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "PM executing task: Create project directory structure"
+    },
+    {
+      "timestamp": 1755541938.797715,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for general task"
+    },
+    {
+      "timestamp": 1755541990.171997,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755541990.199795,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Saved artifact: T1_general.txt"
+    },
+    {
+      "timestamp": 1755541990.199795,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Task completed: Create project directory structure"
+    },
+    {
+      "timestamp": 1755541990.200907,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T1 status changed to complete"
+    },
+    {
+      "timestamp": 1755541990.268892,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T2 status changed to in_progress"
+    }
+  ]
+}

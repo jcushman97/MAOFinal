@@ -1,0 +1,17 @@
+{
+  "projectId": "0ad8465b-51c2-4e5b-a734-295d0f98f9a1",
+  "objective": "Create a simple contact form with HTML structure, CSS styling, and basic validation",
+  "createdAt": 1755545872.272239,
+  "updatedAt": 1755545872.272239,
+  "status": "planning",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": []
+}

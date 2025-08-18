@@ -1,0 +1,165 @@
+{
+  "projectId": "4833346e-42f3-44da-9e53-06a55e1e3580",
+  "objective": "Create a simple HTML button with colorful CSS",
+  "createdAt": 1755549148.819761,
+  "updatedAt": 1755549172.322771,
+  "status": "executing",
+  "tasks": [
+    {
+      "id": "t1",
+      "description": "Create basic HTML file with button element",
+      "team": "frontend",
+      "status": "in_progress",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "t2",
+      "description": "Define button styles with CSS colors and transitions",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "t1"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "t3",
+      "description": "Add hover and active state effects",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "t2"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "t4",
+      "description": "Test button appearance and interactions across browsers",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "t3"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 561,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755549148.886686,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755549148.887634,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755549148.888639,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755549172.32177,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755549172.32177,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755549172.32177,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML file with button element"
+    },
+    {
+      "timestamp": 1755549172.32177,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML file with button element (team: frontend)"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Define button styles with CSS colors and transitions"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Define button styles with CSS colors and transitions (team: frontend)"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add hover and active state effects"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add hover and active state effects (team: frontend)"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test button appearance and interactions across browsers"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test button appearance and interactions across browsers (team: frontend)"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755549172.322771,
+      "level": "info",
+      "agent": "system",
+      "message": "Task t1 status changed to in_progress"
+    }
+  ]
+}

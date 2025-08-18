@@ -1,0 +1,60 @@
+{
+  "projectId": "51c56b77-d2e2-4926-b167-b1d32e64b137",
+  "objective": "Simple test project",
+  "createdAt": 1755546602.853727,
+  "updatedAt": 1755546625.627145,
+  "status": "complete",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 482,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755546602.910759,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755546602.910759,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755546602.910759,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755546625.627145,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755546625.627145,
+      "level": "error",
+      "agent": "pm_001",
+      "message": "Project planning failed: DEBUG"
+    },
+    {
+      "timestamp": 1755546625.627145,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755546625.627145,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project completed successfully"
+    }
+  ]
+}

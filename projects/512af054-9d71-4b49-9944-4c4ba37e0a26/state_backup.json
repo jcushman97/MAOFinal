@@ -1,0 +1,17 @@
+{
+  "projectId": "512af054-9d71-4b49-9944-4c4ba37e0a26",
+  "objective": "Create a simple login form with frontend styling, backend validation, and QA testing",
+  "createdAt": 1755545670.015187,
+  "updatedAt": 1755545670.015187,
+  "status": "planning",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": []
+}
