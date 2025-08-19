@@ -169,9 +169,15 @@ class ProjectState(BaseModel):
         if agent_id not in self.agents:
             logger.warning(f"Agent {agent_id} not found for stats update")
             return
-            
-        self.agents[agent_id].tokensUsed += tokens_used
-        self.agents[agent_id].callCount += 1
+        
+        # Handle both Agent objects and dictionaries (for backward compatibility)
+        agent = self.agents[agent_id]
+        if isinstance(agent, dict):
+            agent['tokensUsed'] = agent.get('tokensUsed', 0) + tokens_used
+            agent['callCount'] = agent.get('callCount', 0) + 1
+        else:
+            agent.tokensUsed += tokens_used
+            agent.callCount += 1
         self.update_timestamp()
 
 

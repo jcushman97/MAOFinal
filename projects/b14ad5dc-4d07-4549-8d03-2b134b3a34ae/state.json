@@ -1,0 +1,695 @@
+{
+  "projectId": "b14ad5dc-4d07-4549-8d03-2b134b3a34ae",
+  "objective": "Simple Colorful html website with simple js and css",
+  "createdAt": 1755566926.657287,
+  "updatedAt": 1755567213.212601,
+  "status": "complete",
+  "tasks": [
+    {
+      "id": "T1",
+      "description": "Create basic HTML structure with responsive layout",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b14ad5dc-4d07-4549-8d03-2b134b3a34ae\\artifacts\\workers\\T1_css_specialist_c34c5084.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "T2",
+      "description": "Design and implement colorful CSS styling with animations",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "T1"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b14ad5dc-4d07-4549-8d03-2b134b3a34ae\\artifacts\\workers\\T2_css_specialist_0d65df78.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "T3",
+      "description": "Add interactive JavaScript features and effects",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "T1"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b14ad5dc-4d07-4549-8d03-2b134b3a34ae\\artifacts\\workers\\T3_javascript_specialist_58f01e7d.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "T4",
+      "description": "Test HTML validity and semantics",
+      "team": "qa",
+      "status": "complete",
+      "dependencies": [
+        "T1"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b14ad5dc-4d07-4549-8d03-2b134b3a34ae\\artifacts\\workers\\T4_qa_html_validator_dator_T4.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "T5",
+      "description": "Test CSS styling and responsive behavior across devices",
+      "team": "qa",
+      "status": "complete",
+      "dependencies": [
+        "T2"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b14ad5dc-4d07-4549-8d03-2b134b3a34ae\\artifacts\\workers\\T5_qa_css_validator_dator_T5.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "T6",
+      "description": "Test JavaScript functionality and performance",
+      "team": "qa",
+      "status": "complete",
+      "dependencies": [
+        "T3"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\b14ad5dc-4d07-4549-8d03-2b134b3a34ae\\artifacts\\workers\\T6_qa_js_validator_dator_T6.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 927,
+      "callCount": 1
+    },
+    "frontend_lead_b14ad5dc": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_css_specialist_c34c5084": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 425,
+      "callCount": 1
+    },
+    "worker_css_specialist_0d65df78": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 470,
+      "callCount": 1
+    },
+    "worker_javascript_specialist_58f01e7d": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 519,
+      "callCount": 1
+    },
+    "qa_lead_b14ad5dc": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_validator_T4": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 659,
+      "callCount": 1
+    },
+    "worker_css_validator_T5": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 552,
+      "callCount": 1
+    },
+    "worker_js_validator_T6": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 508,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755566926.69761,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755566926.69761,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755566926.69761,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755566948.842137,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755566948.843136,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755566948.843136,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML structure with responsive layout"
+    },
+    {
+      "timestamp": 1755566948.843136,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML structure with responsive layout (team: frontend)"
+    },
+    {
+      "timestamp": 1755566948.844514,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755566948.844514,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Design and implement colorful CSS styling with animations (team: frontend)"
+    },
+    {
+      "timestamp": 1755566948.844514,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add interactive JavaScript features and effects"
+    },
+    {
+      "timestamp": 1755566948.845522,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add interactive JavaScript features and effects (team: frontend)"
+    },
+    {
+      "timestamp": 1755566948.845522,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755566948.846522,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test HTML validity and semantics (team: qa)"
+    },
+    {
+      "timestamp": 1755566948.846522,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755566948.847526,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test CSS styling and responsive behavior across devices (team: qa)"
+    },
+    {
+      "timestamp": 1755566948.847526,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755566948.848524,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test JavaScript functionality and performance (team: qa)"
+    },
+    {
+      "timestamp": 1755566948.848524,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755566948.848524,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755566948.851524,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T1 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755566948.851524,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Team Lead frontend executing: Create basic HTML structure with responsive layout"
+    },
+    {
+      "timestamp": 1755566948.851524,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Team Lead delegating task to worker: Create basic HTML structure with responsive layout"
+    },
+    {
+      "timestamp": 1755566948.85952,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Created css_specialist worker for task: Create basic HTML structure with responsive layout"
+    },
+    {
+      "timestamp": 1755566948.85952,
+      "level": "info",
+      "agent": "worker_css_specialist_c34c5084",
+      "message": "Worker css_specialist executing: Create basic HTML structure with responsive layout"
+    },
+    {
+      "timestamp": 1755566948.85952,
+      "level": "info",
+      "agent": "worker_css_specialist_c34c5084",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755567011.236177,
+      "level": "info",
+      "agent": "worker_css_specialist_c34c5084",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755567011.245401,
+      "level": "info",
+      "agent": "worker_css_specialist_c34c5084",
+      "message": "Saved atomic result: T1_css_specialist_c34c5084.txt"
+    },
+    {
+      "timestamp": 1755567011.246404,
+      "level": "info",
+      "agent": "worker_css_specialist_c34c5084",
+      "message": "Atomic task completed in 62.39s: Create basic HTML structure with responsive layout"
+    },
+    {
+      "timestamp": 1755567011.246404,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Worker worker_css_specialist_c34c5084 completed task: Create basic HTML structure with responsive layout"
+    },
+    {
+      "timestamp": 1755567011.247621,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T1 status changed to complete"
+    },
+    {
+      "timestamp": 1755567011.247621,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T2 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755567011.249115,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Team Lead frontend executing: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755567011.250129,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Team Lead delegating task to worker: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755567011.251125,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Created css_specialist worker for task: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755567011.251125,
+      "level": "info",
+      "agent": "worker_css_specialist_0d65df78",
+      "message": "Worker css_specialist executing: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755567011.251125,
+      "level": "info",
+      "agent": "worker_css_specialist_0d65df78",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755567072.185702,
+      "level": "info",
+      "agent": "worker_css_specialist_0d65df78",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755567072.193918,
+      "level": "info",
+      "agent": "worker_css_specialist_0d65df78",
+      "message": "Saved atomic result: T2_css_specialist_0d65df78.txt"
+    },
+    {
+      "timestamp": 1755567072.194901,
+      "level": "info",
+      "agent": "worker_css_specialist_0d65df78",
+      "message": "Atomic task completed in 60.95s: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755567072.194901,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Worker worker_css_specialist_0d65df78 completed task: Design and implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755567072.194901,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T2 status changed to complete"
+    },
+    {
+      "timestamp": 1755567072.195905,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T3 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755567072.196905,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Team Lead frontend executing: Add interactive JavaScript features and effects"
+    },
+    {
+      "timestamp": 1755567072.196905,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Team Lead delegating task to worker: Add interactive JavaScript features and effects"
+    },
+    {
+      "timestamp": 1755567072.197904,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Created javascript_specialist worker for task: Add interactive JavaScript features and effects"
+    },
+    {
+      "timestamp": 1755567072.198904,
+      "level": "info",
+      "agent": "worker_javascript_specialist_58f01e7d",
+      "message": "Worker javascript_specialist executing: Add interactive JavaScript features and effects"
+    },
+    {
+      "timestamp": 1755567072.198904,
+      "level": "info",
+      "agent": "worker_javascript_specialist_58f01e7d",
+      "message": "Calling claude for general task"
+    },
+    {
+      "timestamp": 1755567125.778697,
+      "level": "info",
+      "agent": "worker_javascript_specialist_58f01e7d",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755567125.797313,
+      "level": "info",
+      "agent": "worker_javascript_specialist_58f01e7d",
+      "message": "Saved atomic result: T3_javascript_specialist_58f01e7d.txt"
+    },
+    {
+      "timestamp": 1755567125.797313,
+      "level": "info",
+      "agent": "worker_javascript_specialist_58f01e7d",
+      "message": "Atomic task completed in 53.61s: Add interactive JavaScript features and effects"
+    },
+    {
+      "timestamp": 1755567125.79847,
+      "level": "info",
+      "agent": "frontend_lead_b14ad5dc",
+      "message": "Worker worker_javascript_specialist_58f01e7d completed task: Add interactive JavaScript features and effects"
+    },
+    {
+      "timestamp": 1755567125.79847,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T3 status changed to complete"
+    },
+    {
+      "timestamp": 1755567125.79847,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T4 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755567125.799945,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Team Lead qa executing: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755567125.799945,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "QA task suitable for worker delegation: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755567125.799945,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "QA Team Lead delegating task to worker: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755567125.801416,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Created qa_html_validator worker for task: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755567125.801416,
+      "level": "info",
+      "agent": "worker_html_validator_T4",
+      "message": "Worker qa_html_validator executing: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755567125.802922,
+      "level": "info",
+      "agent": "worker_html_validator_T4",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755567162.668181,
+      "level": "info",
+      "agent": "worker_html_validator_T4",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755567162.68516,
+      "level": "info",
+      "agent": "worker_html_validator_T4",
+      "message": "Saved atomic result: T4_qa_html_validator_dator_T4.txt"
+    },
+    {
+      "timestamp": 1755567162.68516,
+      "level": "info",
+      "agent": "worker_html_validator_T4",
+      "message": "Atomic task completed in 36.89s: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755567162.68516,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Worker worker_html_validator_T4 completed task: Test HTML validity and semantics"
+    },
+    {
+      "timestamp": 1755567162.68516,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T4 status changed to complete"
+    },
+    {
+      "timestamp": 1755567162.686159,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T5 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755567162.686159,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Team Lead qa executing: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755567162.686159,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "QA task suitable for worker delegation: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755567162.686159,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "QA Team Lead delegating task to worker: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755567162.686159,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Created qa_css_validator worker for task: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755567162.686159,
+      "level": "info",
+      "agent": "worker_css_validator_T5",
+      "message": "Worker qa_css_validator executing: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755567162.686159,
+      "level": "info",
+      "agent": "worker_css_validator_T5",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755567188.360412,
+      "level": "info",
+      "agent": "worker_css_validator_T5",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755567188.369417,
+      "level": "info",
+      "agent": "worker_css_validator_T5",
+      "message": "Saved atomic result: T5_qa_css_validator_dator_T5.txt"
+    },
+    {
+      "timestamp": 1755567188.369417,
+      "level": "info",
+      "agent": "worker_css_validator_T5",
+      "message": "Atomic task completed in 25.67s: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755567188.369417,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Worker worker_css_validator_T5 completed task: Test CSS styling and responsive behavior across devices"
+    },
+    {
+      "timestamp": 1755567188.370398,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T5 status changed to complete"
+    },
+    {
+      "timestamp": 1755567188.370398,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T6 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755567188.370398,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Team Lead qa executing: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755567188.370398,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "QA task suitable for worker delegation: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755567188.370398,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "QA Team Lead delegating task to worker: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755567188.37142,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Created qa_js_validator worker for task: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755567188.37142,
+      "level": "info",
+      "agent": "worker_js_validator_T6",
+      "message": "Worker qa_js_validator executing: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755567188.37142,
+      "level": "info",
+      "agent": "worker_js_validator_T6",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755567213.196704,
+      "level": "info",
+      "agent": "worker_js_validator_T6",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755567213.208716,
+      "level": "info",
+      "agent": "worker_js_validator_T6",
+      "message": "Saved atomic result: T6_qa_js_validator_dator_T6.txt"
+    },
+    {
+      "timestamp": 1755567213.208716,
+      "level": "info",
+      "agent": "worker_js_validator_T6",
+      "message": "Atomic task completed in 24.83s: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755567213.209596,
+      "level": "info",
+      "agent": "qa_lead_b14ad5dc",
+      "message": "Worker worker_js_validator_T6 completed task: Test JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755567213.209596,
+      "level": "info",
+      "agent": "system",
+      "message": "Task T6 status changed to complete"
+    },
+    {
+      "timestamp": 1755567213.211599,
+      "level": "info",
+      "agent": "parallel_orchestrator",
+      "message": "Execution metrics: 6/6 completed, 4.4min total, 6.8x speedup"
+    },
+    {
+      "timestamp": 1755567213.212601,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project completed successfully"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "projectId": "1271ed5d-70e3-460c-999e-49893e73732c",
+  "objective": "Create a simple HTML page with title and paragraph",
+  "createdAt": 1755565712.980612,
+  "updatedAt": 1755565712.980612,
+  "status": "planning",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": []
+}

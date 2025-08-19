@@ -320,7 +320,7 @@ class FileManagerEnhanced:
         
         # List task completion status
         for task in self.project_state.tasks:
-            status_icon = "✅" if task.status == "complete" else "🔄" if task.status == "in_progress" else "⏳"
+            status_icon = "[PASS]" if task.status == "complete" else "[PROGRESS]" if task.status == "in_progress" else "[PENDING]"
             summary_content += f"- {status_icon} {task.description} ({task.team})\n"
         
         # Create summary file

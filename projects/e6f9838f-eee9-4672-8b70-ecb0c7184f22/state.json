@@ -1,0 +1,626 @@
+{
+  "projectId": "e6f9838f-eee9-4672-8b70-ecb0c7184f22",
+  "objective": "Simple HTML page with basic CSS",
+  "createdAt": 1755566687.987419,
+  "updatedAt": 1755566809.795513,
+  "status": "failed",
+  "tasks": [
+    {
+      "id": "html_structure",
+      "description": "Create basic HTML page structure with key elements",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\e6f9838f-eee9-4672-8b70-ecb0c7184f22\\artifacts\\workers\\html_structure_html_specialist_2de1f20e.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "css_styling",
+      "description": "Implement core CSS styles for layout and components",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "html_structure"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\e6f9838f-eee9-4672-8b70-ecb0c7184f22\\artifacts\\workers\\css_styling_react_specialist_b2550d46.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "html_validation",
+      "description": "Validate HTML against W3C standards",
+      "team": "qa",
+      "status": "failed",
+      "dependencies": [
+        "html_structure"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 2,
+      "error": "Task execution failed"
+    },
+    {
+      "id": "css_validation",
+      "description": "Validate CSS syntax and check for browser compatibility",
+      "team": "qa",
+      "status": "failed",
+      "dependencies": [
+        "css_styling"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 2,
+      "error": "Task execution failed"
+    },
+    {
+      "id": "responsive_testing",
+      "description": "Test page responsiveness across different screen sizes",
+      "team": "qa",
+      "status": "failed",
+      "dependencies": [
+        "css_styling"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 2,
+      "error": "Task execution failed"
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 886,
+      "callCount": 1
+    },
+    "frontend_lead_e6f9838f": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_specialist_2de1f20e": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 342,
+      "callCount": 1
+    },
+    "worker_react_specialist_b2550d46": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 367,
+      "callCount": 1
+    },
+    "qa_lead_e6f9838f": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_validator_html_val": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_css_validator_css_vali": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_css_validator_responsi": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755566688.039146,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755566688.039146,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755566688.039146,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755566710.787296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML page structure with key elements"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML page structure with key elements (team: frontend)"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Implement core CSS styles for layout and components"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Implement core CSS styles for layout and components (team: frontend)"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Validate HTML against W3C standards"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Validate HTML against W3C standards (team: qa)"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Validate CSS syntax and check for browser compatibility"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Validate CSS syntax and check for browser compatibility (team: qa)"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test page responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test page responsiveness across different screen sizes (team: qa)"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755566710.788296,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755566710.789296,
+      "level": "info",
+      "agent": "system",
+      "message": "Task html_structure status changed to in_progress"
+    },
+    {
+      "timestamp": 1755566710.789296,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Team Lead frontend executing: Create basic HTML page structure with key elements"
+    },
+    {
+      "timestamp": 1755566710.789296,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Team Lead delegating task to worker: Create basic HTML page structure with key elements"
+    },
+    {
+      "timestamp": 1755566710.796305,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Created html_specialist worker for task: Create basic HTML page structure with key elements"
+    },
+    {
+      "timestamp": 1755566710.796305,
+      "level": "info",
+      "agent": "worker_html_specialist_2de1f20e",
+      "message": "Worker html_specialist executing: Create basic HTML page structure with key elements"
+    },
+    {
+      "timestamp": 1755566710.796305,
+      "level": "info",
+      "agent": "worker_html_specialist_2de1f20e",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755566742.12927,
+      "level": "info",
+      "agent": "worker_html_specialist_2de1f20e",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755566742.141745,
+      "level": "info",
+      "agent": "worker_html_specialist_2de1f20e",
+      "message": "Saved atomic result: html_structure_html_specialist_2de1f20e.txt"
+    },
+    {
+      "timestamp": 1755566742.141745,
+      "level": "info",
+      "agent": "worker_html_specialist_2de1f20e",
+      "message": "Atomic task completed in 31.34s: Create basic HTML page structure with key elements"
+    },
+    {
+      "timestamp": 1755566742.141745,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Worker worker_html_specialist_2de1f20e completed task: Create basic HTML page structure with key elements"
+    },
+    {
+      "timestamp": 1755566742.142999,
+      "level": "info",
+      "agent": "system",
+      "message": "Task html_structure status changed to complete"
+    },
+    {
+      "timestamp": 1755566742.142999,
+      "level": "info",
+      "agent": "system",
+      "message": "Task css_styling status changed to in_progress"
+    },
+    {
+      "timestamp": 1755566742.142999,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Team Lead frontend executing: Implement core CSS styles for layout and components"
+    },
+    {
+      "timestamp": 1755566742.142999,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Team Lead delegating task to worker: Implement core CSS styles for layout and components"
+    },
+    {
+      "timestamp": 1755566742.142999,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Created react_specialist worker for task: Implement core CSS styles for layout and components"
+    },
+    {
+      "timestamp": 1755566742.142999,
+      "level": "info",
+      "agent": "worker_react_specialist_b2550d46",
+      "message": "Worker react_specialist executing: Implement core CSS styles for layout and components"
+    },
+    {
+      "timestamp": 1755566742.142999,
+      "level": "info",
+      "agent": "worker_react_specialist_b2550d46",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755566794.073222,
+      "level": "info",
+      "agent": "worker_react_specialist_b2550d46",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "worker_react_specialist_b2550d46",
+      "message": "Saved atomic result: css_styling_react_specialist_b2550d46.txt"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "worker_react_specialist_b2550d46",
+      "message": "Atomic task completed in 51.94s: Implement core CSS styles for layout and components"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "frontend_lead_e6f9838f",
+      "message": "Worker worker_react_specialist_b2550d46 completed task: Implement core CSS styles for layout and components"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "system",
+      "message": "Task css_styling status changed to complete"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "system",
+      "message": "Task html_validation status changed to in_progress"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Team Lead qa executing: Validate HTML against W3C standards"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "QA task suitable for worker delegation: Validate HTML against W3C standards"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "QA Team Lead delegating task to worker: Validate HTML against W3C standards"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Created qa_html_validator worker for task: Validate HTML against W3C standards"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "worker_html_validator_html_val",
+      "message": "Worker qa_html_validator executing: Validate HTML against W3C standards"
+    },
+    {
+      "timestamp": 1755566794.086007,
+      "level": "info",
+      "agent": "worker_html_validator_html_val",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755566799.756176,
+      "level": "warning",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed (attempt 1): Model call failed: CLI command execution failed: CLI command failed: ERROR: Claude CLI failed with return code 1\r\nSTDERR: Claude Code was unable to find CLAUDE_CODE_GIT_BASH_PATH path \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Git\\bin\\bash.exe\"\r\n\r\nSTDOUT: \r\nCOMMAND: C:\\Users\\jcushman\\AppData\\Local\\Programs\\node-v22.17.0-win-x64\\claude.cmd --print --model claude-3-5-sonnet-20241022 --allowedTools Write --permission-mode bypassPermissions\r\n"
+    },
+    {
+      "timestamp": 1755566800.861395,
+      "level": "warning",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed (attempt 2): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566802.952772,
+      "level": "warning",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed (attempt 3): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566802.952772,
+      "level": "error",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed after 3 attempts"
+    },
+    {
+      "timestamp": 1755566802.952772,
+      "level": "error",
+      "agent": "worker_html_validator_html_val",
+      "message": "Atomic task execution failed: Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566802.952772,
+      "level": "warning",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Worker worker_html_validator_html_val failed task: Validate HTML against W3C standards"
+    },
+    {
+      "timestamp": 1755566802.952772,
+      "level": "error",
+      "agent": "system",
+      "message": "Task html_validation status changed to failed"
+    },
+    {
+      "timestamp": 1755566802.953775,
+      "level": "info",
+      "agent": "system",
+      "message": "Task css_validation status changed to in_progress"
+    },
+    {
+      "timestamp": 1755566802.953775,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Team Lead qa executing: Validate CSS syntax and check for browser compatibility"
+    },
+    {
+      "timestamp": 1755566802.953775,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "QA task suitable for worker delegation: Validate CSS syntax and check for browser compatibility"
+    },
+    {
+      "timestamp": 1755566802.953775,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "QA Team Lead delegating task to worker: Validate CSS syntax and check for browser compatibility"
+    },
+    {
+      "timestamp": 1755566802.954773,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Created qa_css_validator worker for task: Validate CSS syntax and check for browser compatibility"
+    },
+    {
+      "timestamp": 1755566802.954773,
+      "level": "info",
+      "agent": "worker_css_validator_css_vali",
+      "message": "Worker qa_css_validator executing: Validate CSS syntax and check for browser compatibility"
+    },
+    {
+      "timestamp": 1755566802.954773,
+      "level": "info",
+      "agent": "worker_css_validator_css_vali",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755566803.055836,
+      "level": "warning",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed (attempt 1): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566804.203915,
+      "level": "warning",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed (attempt 2): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566806.30696,
+      "level": "warning",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed (attempt 3): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566806.30696,
+      "level": "error",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed after 3 attempts"
+    },
+    {
+      "timestamp": 1755566806.30696,
+      "level": "error",
+      "agent": "worker_css_validator_css_vali",
+      "message": "Atomic task execution failed: Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566806.30696,
+      "level": "warning",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Worker worker_css_validator_css_vali failed task: Validate CSS syntax and check for browser compatibility"
+    },
+    {
+      "timestamp": 1755566806.30696,
+      "level": "error",
+      "agent": "system",
+      "message": "Task css_validation status changed to failed"
+    },
+    {
+      "timestamp": 1755566806.30696,
+      "level": "info",
+      "agent": "system",
+      "message": "Task responsive_testing status changed to in_progress"
+    },
+    {
+      "timestamp": 1755566806.30796,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Team Lead qa executing: Test page responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755566806.30796,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "QA task suitable for worker delegation: Test page responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755566806.30796,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "QA Team Lead delegating task to worker: Test page responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755566806.30796,
+      "level": "info",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Created qa_css_validator worker for task: Test page responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755566806.30796,
+      "level": "info",
+      "agent": "worker_css_validator_responsi",
+      "message": "Worker qa_css_validator executing: Test page responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755566806.30796,
+      "level": "info",
+      "agent": "worker_css_validator_responsi",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755566806.395422,
+      "level": "warning",
+      "agent": "worker_css_validator_responsi",
+      "message": "LLM call failed (attempt 1): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566807.537795,
+      "level": "warning",
+      "agent": "worker_css_validator_responsi",
+      "message": "LLM call failed (attempt 2): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566809.794523,
+      "level": "warning",
+      "agent": "worker_css_validator_responsi",
+      "message": "LLM call failed (attempt 3): Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566809.794523,
+      "level": "error",
+      "agent": "worker_css_validator_responsi",
+      "message": "LLM call failed after 3 attempts"
+    },
+    {
+      "timestamp": 1755566809.794523,
+      "level": "error",
+      "agent": "worker_css_validator_responsi",
+      "message": "Atomic task execution failed: Model call failed: CLI command execution failed: CLI command failed: "
+    },
+    {
+      "timestamp": 1755566809.795513,
+      "level": "warning",
+      "agent": "qa_lead_e6f9838f",
+      "message": "Worker worker_css_validator_responsi failed task: Test page responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755566809.795513,
+      "level": "error",
+      "agent": "system",
+      "message": "Task responsive_testing status changed to failed"
+    },
+    {
+      "timestamp": 1755566809.795513,
+      "level": "info",
+      "agent": "parallel_orchestrator",
+      "message": "Execution metrics: 2/5 completed, 1.7min total, 15.2x speedup"
+    },
+    {
+      "timestamp": 1755566809.795513,
+      "level": "error",
+      "agent": "orchestrator",
+      "message": "Project failed to complete"
+    }
+  ]
+}

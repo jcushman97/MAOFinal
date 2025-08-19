@@ -168,6 +168,9 @@ class TeamLeadAgent(BaseAgent):
         Returns:
             True if task completed successfully
         """
+        # Set task context for intelligent routing
+        self.set_current_task(task)
+        
         self._log(LogLevel.INFO, f"Team Lead {self.team_type.value} executing: {task.description}")
         
         try:
@@ -192,7 +195,7 @@ class TeamLeadAgent(BaseAgent):
             )
             
             # Apply team-specific post-processing
-            processed_output = await self._post_process_output(task, response["output"])
+            processed_output = await self._post_process_output(task, response["response"])
             
             # Save task output with team context
             await self._save_team_task_artifact(task, processed_output)
@@ -204,6 +207,10 @@ class TeamLeadAgent(BaseAgent):
             self._log(LogLevel.ERROR, f"Team task execution failed: {e}")
             task.error = str(e)
             return False
+        
+        finally:
+            # Clear task context
+            self.set_current_task(None)
     
     def _validate_task_for_team(self, task: Task) -> bool:
         """Validate that task is appropriate for this team."""

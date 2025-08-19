@@ -81,13 +81,8 @@ class QATeamLead(TeamLeadAgent):
             # Create appropriate QA worker using factory
             worker = QAWorkerFactory.create_worker(task, self.project_state, self.config)
             
-            # Register worker in project state
-            self.project_state.agents[worker.agent_id] = {
-                "type": "worker",
-                "model": worker.model_preference,
-                "tokensUsed": 0,
-                "callCount": 0
-            }
+            # Worker is automatically registered in project state by BaseAgent constructor
+            # No need to manually register here
             
             self._log(LogLevel.INFO, f"Created {worker.specialty.value} worker for task: {task.description}")
             
@@ -101,10 +96,8 @@ class QATeamLead(TeamLeadAgent):
                 )
                 
                 if success:
-                    # Update worker metrics in project state
-                    if worker.agent_id in self.project_state.agents:
-                        self.project_state.agents[worker.agent_id]["tokensUsed"] = worker.tokens_used
-                        self.project_state.agents[worker.agent_id]["callCount"] = worker.call_count
+                    # Worker metrics are automatically updated by the base agent's call_llm method
+                    # No need to manually update here since BaseAgent already handles this
                     
                     self._log(LogLevel.INFO, f"Worker {worker.agent_id} completed task: {task.description}")
                     return True

@@ -6,6 +6,20 @@
       "json_markers": ["BEGIN_JSON", "END_JSON"],
       "timeout": 300,
       "max_retries": 3
+    },
+    "gpt": {
+      "cmd": ["python", "wrappers/gpt_wrapper.py"],
+      "extra_args": ["--model", "gpt-4"],
+      "json_markers": ["BEGIN_JSON", "END_JSON"],
+      "timeout": 300,
+      "max_retries": 3
+    },
+    "gemini": {
+      "cmd": ["python", "wrappers/gemini_wrapper.py"],
+      "extra_args": ["--model", "gemini-1.5-pro"],
+      "json_markers": ["BEGIN_JSON", "END_JSON"],
+      "timeout": 300,
+      "max_retries": 3
     }
   },
   "routing": {
@@ -13,8 +27,8 @@
     "python": "claude",
     "backend": "claude", 
     "frontend": "claude",
-    "research": "claude",
-    "documentation": "claude",
+    "research": "gemini",
+    "documentation": "gpt",
     "general": "claude"
   }
 }

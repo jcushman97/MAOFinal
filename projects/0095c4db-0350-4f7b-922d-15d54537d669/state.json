@@ -1,0 +1,301 @@
+{
+  "projectId": "0095c4db-0350-4f7b-922d-15d54537d669",
+  "objective": "Simple Colorful html website with simple js and css",
+  "createdAt": 1755561699.147232,
+  "updatedAt": 1755561780.309154,
+  "status": "failed",
+  "tasks": [
+    {
+      "id": "setup_01",
+      "description": "Create basic HTML structure with semantic elements",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\0095c4db-0350-4f7b-922d-15d54537d669\\artifacts\\workers\\setup_01_html_specialist_c3fade02.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "style_01",
+      "description": "Implement vibrant color scheme and responsive CSS layout",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "setup_01"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "js_01",
+      "description": "Add simple interactive JavaScript features (animations, transitions)",
+      "team": "frontend",
+      "status": "queued",
+      "dependencies": [
+        "setup_01"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "test_01",
+      "description": "Validate HTML structure and accessibility",
+      "team": "qa",
+      "status": "queued",
+      "dependencies": [
+        "setup_01"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "test_02",
+      "description": "Test CSS responsiveness across different screen sizes",
+      "team": "qa",
+      "status": "queued",
+      "dependencies": [
+        "style_01"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    },
+    {
+      "id": "test_03",
+      "description": "Verify JavaScript functionality and performance",
+      "team": "qa",
+      "status": "queued",
+      "dependencies": [
+        "js_01"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 0,
+      "error": null
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 763,
+      "callCount": 1
+    },
+    "frontend_lead_0095c4db": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_specialist_c3fade02": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 249,
+      "callCount": 1
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755561699.183735,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755561699.183735,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755561699.184737,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755561727.477639,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755561727.477639,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755561727.477639,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML structure with semantic elements"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML structure with semantic elements (team: frontend)"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Implement vibrant color scheme and responsive CSS layout"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Implement vibrant color scheme and responsive CSS layout (team: frontend)"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add simple interactive JavaScript features (animations, transitions)"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add simple interactive JavaScript features (animations, transitions) (team: frontend)"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Validate HTML structure and accessibility (team: qa)"
+    },
+    {
+      "timestamp": 1755561727.478639,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test CSS responsiveness across different screen sizes"
+    },
+    {
+      "timestamp": 1755561727.47964,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test CSS responsiveness across different screen sizes (team: qa)"
+    },
+    {
+      "timestamp": 1755561727.47964,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Verify JavaScript functionality and performance"
+    },
+    {
+      "timestamp": 1755561727.47964,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Verify JavaScript functionality and performance (team: qa)"
+    },
+    {
+      "timestamp": 1755561727.47964,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755561727.47964,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755561727.48107,
+      "level": "info",
+      "agent": "system",
+      "message": "Task setup_01 status changed to in_progress"
+    },
+    {
+      "timestamp": 1755561727.482075,
+      "level": "info",
+      "agent": "frontend_lead_0095c4db",
+      "message": "Team Lead frontend executing: Create basic HTML structure with semantic elements"
+    },
+    {
+      "timestamp": 1755561727.482075,
+      "level": "info",
+      "agent": "frontend_lead_0095c4db",
+      "message": "Team Lead delegating task to worker: Create basic HTML structure with semantic elements"
+    },
+    {
+      "timestamp": 1755561727.483077,
+      "level": "info",
+      "agent": "frontend_lead_0095c4db",
+      "message": "Created html_specialist worker for task: Create basic HTML structure with semantic elements"
+    },
+    {
+      "timestamp": 1755561727.483077,
+      "level": "info",
+      "agent": "worker_html_specialist_c3fade02",
+      "message": "Worker html_specialist executing: Create basic HTML structure with semantic elements"
+    },
+    {
+      "timestamp": 1755561727.483077,
+      "level": "info",
+      "agent": "worker_html_specialist_c3fade02",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755561780.28815,
+      "level": "info",
+      "agent": "worker_html_specialist_c3fade02",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755561780.303163,
+      "level": "info",
+      "agent": "worker_html_specialist_c3fade02",
+      "message": "Saved atomic result: setup_01_html_specialist_c3fade02.txt"
+    },
+    {
+      "timestamp": 1755561780.304152,
+      "level": "info",
+      "agent": "worker_html_specialist_c3fade02",
+      "message": "Atomic task completed in 52.83s: Create basic HTML structure with semantic elements"
+    },
+    {
+      "timestamp": 1755561780.304152,
+      "level": "info",
+      "agent": "frontend_lead_0095c4db",
+      "message": "Worker worker_html_specialist_c3fade02 completed task: Create basic HTML structure with semantic elements"
+    },
+    {
+      "timestamp": 1755561780.304152,
+      "level": "info",
+      "agent": "system",
+      "message": "Task setup_01 status changed to complete"
+    },
+    {
+      "timestamp": 1755561780.308154,
+      "level": "info",
+      "agent": "parallel_orchestrator",
+      "message": "Execution metrics: 1/6 completed, 0.9min total, 34.1x speedup"
+    },
+    {
+      "timestamp": 1755561780.309154,
+      "level": "error",
+      "agent": "orchestrator",
+      "message": "Project failed to complete"
+    }
+  ]
+}

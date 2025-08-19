@@ -35,16 +35,16 @@ def print_status(message: str, status: str, details: str = ""):
     """Print formatted status message."""
     if status == "PASS":
         color = Colors.GREEN
-        symbol = "✓"
+        symbol = ""
     elif status == "FAIL":
         color = Colors.RED
-        symbol = "✗"
+        symbol = ""
     elif status == "WARN":
         color = Colors.YELLOW
-        symbol = "⚠"
+        symbol = ""
     else:
         color = Colors.BLUE
-        symbol = "ℹ"
+        symbol = ""
     
     print(f"{color}{symbol}{Colors.ENDC} {message}")
     if details:
@@ -286,11 +286,11 @@ async def main():
     print(f"\nResults: {passed}/{total} tests passed")
     
     if passed == total:
-        print(f"\n{Colors.GREEN}{Colors.BOLD}✓ All tests passed! MAOS is ready to use.{Colors.ENDC}")
+        print(f"\n{Colors.GREEN}{Colors.BOLD} All tests passed! MAOS is ready to use.{Colors.ENDC}")
         print(f"\nTry running: python main.py \"Create a simple hello world Python script\"")
         return 0
     else:
-        print(f"\n{Colors.RED}{Colors.BOLD}✗ Some tests failed. Please fix issues before using MAOS.{Colors.ENDC}")
+        print(f"\n{Colors.RED}{Colors.BOLD} Some tests failed. Please fix issues before using MAOS.{Colors.ENDC}")
         return 1
 
 

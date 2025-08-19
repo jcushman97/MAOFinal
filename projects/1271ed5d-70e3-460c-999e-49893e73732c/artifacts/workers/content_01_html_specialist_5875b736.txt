@@ -1,0 +1,7 @@
+Task: Add title element with appropriate heading
+Worker: worker_html_specialist_5875b736
+Specialty: html_specialist
+Team: frontend
+Generated: 1755565805.785547
+--------------------------------------------------
+Execution error

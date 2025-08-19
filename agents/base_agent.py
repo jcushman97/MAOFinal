@@ -13,6 +13,8 @@ from datetime import datetime
 from core.config import Config, ProviderConfig
 from core.state import ProjectState, Agent, AgentType, LogLevel, Task
 from core.logger import get_logger
+from core.ascii_guardrails import ascii_guardrails, enforce_ascii_prompt
+from core.model_router import IntelligentModelRouter
 from providers.cli_client import CLIClient
 
 logger = get_logger("base_agent")
@@ -53,8 +55,9 @@ class BaseAgent(ABC):
         self.project_state = project_state
         self.model_preference = model_preference
         
-        # Initialize CLI client
+        # Initialize CLI client and model router
         self.cli_client = CLIClient(config)
+        self.model_router = IntelligentModelRouter(config)
         
         # Register agent in project state if not exists
         if agent_id not in project_state.agents:
@@ -64,6 +67,9 @@ class BaseAgent(ABC):
                 tokensUsed=0,
                 callCount=0
             )
+        
+        # Initialize task tracking for intelligent routing
+        self._current_task = None
         
         logger.info(f"Agent {agent_id} ({agent_type}) initialized")
     
@@ -96,23 +102,54 @@ class BaseAgent(ABC):
         if max_retries is None:
             max_retries = self.config.max_retries
         
-        # Determine which model to use
-        model_name = self.model_preference or self.config.get_provider_for_task(task_type)
+        # Enhance prompt with ASCII-only enforcement
+        enhanced_prompt = enforce_ascii_prompt(prompt)
+        
+        # Use intelligent model routing for optimal model selection
+        if hasattr(self, '_current_task') and self._current_task:
+            model_name, confidence = self.model_router.select_model_for_task(
+                self._current_task, 
+                preferred_model=self.model_preference
+            )
+            self._log(LogLevel.INFO, f"Intelligent routing selected {model_name} (confidence: {confidence:.2f})")
+        else:
+            # Fallback to preference or default routing
+            model_name = self.model_preference or self.config.get_provider_for_task(task_type)
         
         self._log(LogLevel.INFO, f"Calling {model_name} for {task_type} task")
         
         for attempt in range(max_retries + 1):
             try:
-                # Call CLI client
+                # Call CLI client with enhanced prompt
                 result = await self.cli_client.call_model(
                     model_name=model_name,
-                    prompt=prompt,
+                    prompt=enhanced_prompt,
                     expect_json=expect_json
                 )
                 
+                # Validate and sanitize the response for ASCII compliance
+                if 'response' in result:
+                    is_valid, sanitized_response = ascii_guardrails.validate_agent_output(
+                        result['response'], 
+                        f"{self.agent_id}"
+                    )
+                    if not is_valid:
+                        result['response'] = sanitized_response
+                        self._log(LogLevel.WARNING, "Agent output sanitized for ASCII compliance")
+                
                 # Update agent statistics
                 tokens_used = result.get('metadata', {}).get('tokens_used', 0)
+                execution_time = result.get('metadata', {}).get('execution_time', 0)
                 self.project_state.update_agent_stats(self.agent_id, tokens_used)
+                
+                # Update model router performance statistics
+                if hasattr(self, '_current_task') and self._current_task:
+                    self.model_router.update_model_performance(
+                        model_name, 
+                        self._current_task, 
+                        success=True,
+                        response_time=execution_time
+                    )
                 
                 self._log(LogLevel.INFO, f"LLM call successful (attempt {attempt + 1})")
                 return result
@@ -120,7 +157,22 @@ class BaseAgent(ABC):
             except Exception as e:
                 self._log(LogLevel.WARNING, f"LLM call failed (attempt {attempt + 1}): {e}")
                 
+                # Update model router with failure
+                if hasattr(self, '_current_task') and self._current_task:
+                    self.model_router.update_model_performance(
+                        model_name, 
+                        self._current_task, 
+                        success=False
+                    )
+                
                 if attempt < max_retries:
+                    # Try fallback model on first failure if available
+                    if attempt == 0 and hasattr(self, '_current_task') and self._current_task:
+                        fallback_model = self.model_router.get_fallback_model(model_name, self._current_task)
+                        if fallback_model and fallback_model != model_name:
+                            self._log(LogLevel.INFO, f"Trying fallback model: {fallback_model}")
+                            model_name = fallback_model
+                    
                     # Exponential backoff
                     wait_time = self.config.retry_delay * (2 ** attempt)
                     await asyncio.sleep(wait_time)
@@ -130,6 +182,10 @@ class BaseAgent(ABC):
         
         # Should not reach here, but just in case
         raise RuntimeError(f"LLM call failed after all retry attempts")
+    
+    def set_current_task(self, task: Optional[Task]):
+        """Set the current task for intelligent routing context."""
+        self._current_task = task
     
     def _log(self, level: LogLevel, message: str):
         """Log a message with agent context."""

@@ -167,6 +167,9 @@ class WorkerAgent(BaseAgent):
         Returns:
             True if task completed successfully
         """
+        # Set task context for intelligent routing
+        self.set_current_task(task)
+        
         self._log(LogLevel.INFO, f"Worker {self.specialty.value} executing: {task.description}")
         
         start_time = asyncio.get_event_loop().time()
@@ -191,7 +194,7 @@ class WorkerAgent(BaseAgent):
             )
             
             # Process and validate output
-            processed_output = await self._process_atomic_output(task, response["output"])
+            processed_output = await self._process_atomic_output(task, response["response"])
             
             # Save atomic task result
             await self._save_atomic_result(task, processed_output)
@@ -212,6 +215,10 @@ class WorkerAgent(BaseAgent):
             self._update_metrics(False, execution_time, {})
             
             return False
+        
+        finally:
+            # Clear task context
+            self.set_current_task(None)
     
     def _validate_task_for_specialty(self, task: Task) -> bool:
         """Validate that task matches worker's specialty."""

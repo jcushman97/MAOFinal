@@ -197,6 +197,9 @@ Respond with your work output directly. Be thorough and professional.
         Returns:
             True if task completed successfully
         """
+        # Set task context for intelligent routing
+        self.set_current_task(task)
+        
         self._log(LogLevel.INFO, f"PM executing task: {task.description}")
         
         try:
@@ -223,7 +226,7 @@ Respond with your work output directly. Be thorough and professional.
             )
             
             # Save task output as artifact
-            await self._save_task_artifact(task, response["output"])
+            await self._save_task_artifact(task, response["response"])
             
             self._log(LogLevel.INFO, f"Task completed: {task.description}")
             return True
@@ -232,6 +235,10 @@ Respond with your work output directly. Be thorough and professional.
             self._log(LogLevel.ERROR, f"Task execution failed: {e}")
             task.error = str(e)
             return False
+        
+        finally:
+            # Clear task context
+            self.set_current_task(None)
     
     def _map_team_to_task_type(self, team: str) -> str:
         """Map team name to task type for LLM routing."""

@@ -1,0 +1,17 @@
+{
+  "projectId": "e6f9838f-eee9-4672-8b70-ecb0c7184f22",
+  "objective": "Simple HTML page with basic CSS",
+  "createdAt": 1755566687.987419,
+  "updatedAt": 1755566687.987419,
+  "status": "planning",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": []
+}

@@ -1,0 +1,725 @@
+{
+  "projectId": "67535895-6a57-4adf-a99d-5f7806756bc0",
+  "objective": "Simple Colorful html website with simple js and css",
+  "createdAt": 1755562528.487506,
+  "updatedAt": 1755563022.070518,
+  "status": "failed",
+  "tasks": [
+    {
+      "id": "html_structure",
+      "description": "Create basic HTML structure with semantic markup",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\67535895-6a57-4adf-a99d-5f7806756bc0\\artifacts\\workers\\html_structure_html_specialist_69a8d410.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "css_styling",
+      "description": "Implement colorful CSS styling with animations",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "html_structure"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\67535895-6a57-4adf-a99d-5f7806756bc0\\artifacts\\workers\\css_styling_css_specialist_b928cb07.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "js_interactivity",
+      "description": "Add basic JavaScript interactivity and effects",
+      "team": "frontend",
+      "status": "complete",
+      "dependencies": [
+        "html_structure"
+      ],
+      "subtasks": [],
+      "artifacts": [
+        "projects\\67535895-6a57-4adf-a99d-5f7806756bc0\\artifacts\\workers\\js_interactivity_javascript_specialist_f44826cf.txt"
+      ],
+      "attempts": 2,
+      "error": null
+    },
+    {
+      "id": "html_validation",
+      "description": "Validate HTML structure and accessibility",
+      "team": "qa",
+      "status": "failed",
+      "dependencies": [
+        "html_structure"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 2,
+      "error": "Task execution failed"
+    },
+    {
+      "id": "css_validation",
+      "description": "Test CSS styling across browsers and screen sizes",
+      "team": "qa",
+      "status": "failed",
+      "dependencies": [
+        "css_styling"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 2,
+      "error": "Task execution failed"
+    },
+    {
+      "id": "js_validation",
+      "description": "Test all JavaScript functionality and interactions",
+      "team": "qa",
+      "status": "failed",
+      "dependencies": [
+        "js_interactivity"
+      ],
+      "subtasks": [],
+      "artifacts": [],
+      "attempts": 2,
+      "error": "Task execution failed"
+    }
+  ],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 772,
+      "callCount": 1
+    },
+    "frontend_lead_67535895": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_specialist_69a8d410": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 310,
+      "callCount": 1
+    },
+    "worker_css_specialist_b928cb07": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 151,
+      "callCount": 1
+    },
+    "worker_javascript_specialist_f44826cf": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 153,
+      "callCount": 1
+    },
+    "qa_lead_67535895": {
+      "type": "lead",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_html_validator_html_val": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_css_validator_css_vali": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    },
+    "worker_js_validator_js_valid": {
+      "type": "worker",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": [
+    {
+      "timestamp": 1755562528.522116,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project planning started"
+    },
+    {
+      "timestamp": 1755562528.523123,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Starting project planning phase"
+    },
+    {
+      "timestamp": 1755562528.523123,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Calling claude for plan task"
+    },
+    {
+      "timestamp": 1755562552.029071,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project analysis: web_app (simple complexity)"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Create basic HTML structure with semantic markup"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Create basic HTML structure with semantic markup (team: frontend)"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Implement colorful CSS styling with animations (team: frontend)"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Add basic JavaScript interactivity and effects"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Add basic JavaScript interactivity and effects (team: frontend)"
+    },
+    {
+      "timestamp": 1755562552.030071,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755562552.031367,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Validate HTML structure and accessibility (team: qa)"
+    },
+    {
+      "timestamp": 1755562552.031367,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test CSS styling across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755562552.031367,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test CSS styling across browsers and screen sizes (team: qa)"
+    },
+    {
+      "timestamp": 1755562552.031367,
+      "level": "info",
+      "agent": "system",
+      "message": "Task added: Test all JavaScript functionality and interactions"
+    },
+    {
+      "timestamp": 1755562552.031367,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Created task: Test all JavaScript functionality and interactions (team: qa)"
+    },
+    {
+      "timestamp": 1755562552.031367,
+      "level": "info",
+      "agent": "pm_001",
+      "message": "Project planning completed successfully"
+    },
+    {
+      "timestamp": 1755562552.031367,
+      "level": "info",
+      "agent": "orchestrator",
+      "message": "Project execution started"
+    },
+    {
+      "timestamp": 1755562552.032371,
+      "level": "info",
+      "agent": "system",
+      "message": "Task html_structure status changed to in_progress"
+    },
+    {
+      "timestamp": 1755562552.033371,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Team Lead frontend executing: Create basic HTML structure with semantic markup"
+    },
+    {
+      "timestamp": 1755562552.033371,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Team Lead delegating task to worker: Create basic HTML structure with semantic markup"
+    },
+    {
+      "timestamp": 1755562552.034371,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Created html_specialist worker for task: Create basic HTML structure with semantic markup"
+    },
+    {
+      "timestamp": 1755562552.034371,
+      "level": "info",
+      "agent": "worker_html_specialist_69a8d410",
+      "message": "Worker html_specialist executing: Create basic HTML structure with semantic markup"
+    },
+    {
+      "timestamp": 1755562552.034371,
+      "level": "info",
+      "agent": "worker_html_specialist_69a8d410",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755562580.401482,
+      "level": "info",
+      "agent": "worker_html_specialist_69a8d410",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755562580.416511,
+      "level": "info",
+      "agent": "worker_html_specialist_69a8d410",
+      "message": "Saved atomic result: html_structure_html_specialist_69a8d410.txt"
+    },
+    {
+      "timestamp": 1755562580.416511,
+      "level": "info",
+      "agent": "worker_html_specialist_69a8d410",
+      "message": "Atomic task completed in 28.38s: Create basic HTML structure with semantic markup"
+    },
+    {
+      "timestamp": 1755562580.417514,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Worker worker_html_specialist_69a8d410 completed task: Create basic HTML structure with semantic markup"
+    },
+    {
+      "timestamp": 1755562580.417514,
+      "level": "info",
+      "agent": "system",
+      "message": "Task html_structure status changed to complete"
+    },
+    {
+      "timestamp": 1755562580.417514,
+      "level": "info",
+      "agent": "system",
+      "message": "Task css_styling status changed to in_progress"
+    },
+    {
+      "timestamp": 1755562580.418513,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Team Lead frontend executing: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755562580.418513,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Team Lead delegating task to worker: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755562580.419517,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Created css_specialist worker for task: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755562580.419517,
+      "level": "info",
+      "agent": "worker_css_specialist_b928cb07",
+      "message": "Worker css_specialist executing: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755562580.420518,
+      "level": "info",
+      "agent": "worker_css_specialist_b928cb07",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755562628.016026,
+      "level": "info",
+      "agent": "worker_css_specialist_b928cb07",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755562628.032234,
+      "level": "info",
+      "agent": "worker_css_specialist_b928cb07",
+      "message": "Saved atomic result: css_styling_css_specialist_b928cb07.txt"
+    },
+    {
+      "timestamp": 1755562628.032234,
+      "level": "info",
+      "agent": "worker_css_specialist_b928cb07",
+      "message": "Atomic task completed in 47.61s: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755562628.033234,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Worker worker_css_specialist_b928cb07 completed task: Implement colorful CSS styling with animations"
+    },
+    {
+      "timestamp": 1755562628.033234,
+      "level": "info",
+      "agent": "system",
+      "message": "Task css_styling status changed to complete"
+    },
+    {
+      "timestamp": 1755562628.033234,
+      "level": "info",
+      "agent": "system",
+      "message": "Task js_interactivity status changed to in_progress"
+    },
+    {
+      "timestamp": 1755562628.034234,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Team Lead frontend executing: Add basic JavaScript interactivity and effects"
+    },
+    {
+      "timestamp": 1755562628.034234,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Team Lead delegating task to worker: Add basic JavaScript interactivity and effects"
+    },
+    {
+      "timestamp": 1755562628.035238,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Created javascript_specialist worker for task: Add basic JavaScript interactivity and effects"
+    },
+    {
+      "timestamp": 1755562628.035238,
+      "level": "info",
+      "agent": "worker_javascript_specialist_f44826cf",
+      "message": "Worker javascript_specialist executing: Add basic JavaScript interactivity and effects"
+    },
+    {
+      "timestamp": 1755562628.035238,
+      "level": "info",
+      "agent": "worker_javascript_specialist_f44826cf",
+      "message": "Calling claude for general task"
+    },
+    {
+      "timestamp": 1755562673.105481,
+      "level": "info",
+      "agent": "worker_javascript_specialist_f44826cf",
+      "message": "LLM call successful (attempt 1)"
+    },
+    {
+      "timestamp": 1755562673.122471,
+      "level": "info",
+      "agent": "worker_javascript_specialist_f44826cf",
+      "message": "Saved atomic result: js_interactivity_javascript_specialist_f44826cf.txt"
+    },
+    {
+      "timestamp": 1755562673.122471,
+      "level": "info",
+      "agent": "worker_javascript_specialist_f44826cf",
+      "message": "Atomic task completed in 45.09s: Add basic JavaScript interactivity and effects"
+    },
+    {
+      "timestamp": 1755562673.122471,
+      "level": "info",
+      "agent": "frontend_lead_67535895",
+      "message": "Worker worker_javascript_specialist_f44826cf completed task: Add basic JavaScript interactivity and effects"
+    },
+    {
+      "timestamp": 1755562673.123472,
+      "level": "info",
+      "agent": "system",
+      "message": "Task js_interactivity status changed to complete"
+    },
+    {
+      "timestamp": 1755562673.123472,
+      "level": "info",
+      "agent": "system",
+      "message": "Task html_validation status changed to in_progress"
+    },
+    {
+      "timestamp": 1755562673.124472,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "Team Lead qa executing: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755562673.125488,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "QA task suitable for worker delegation: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755562673.125488,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "QA Team Lead delegating task to worker: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755562673.125488,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "Created qa_html_validator worker for task: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755562673.125488,
+      "level": "info",
+      "agent": "worker_html_validator_html_val",
+      "message": "Worker qa_html_validator executing: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755562673.125488,
+      "level": "info",
+      "agent": "worker_html_validator_html_val",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755562725.955904,
+      "level": "warning",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed (attempt 1): 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755562752.660906,
+      "level": "warning",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed (attempt 2): 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "warning",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed (attempt 3): Model call failed: CLI command execution failed: CLI command failed: Exception in thread Thread-1 (_readerthread):\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\threading.py\", line 1016, in _bootstrap_inner\r\n    self.run()\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\threading.py\", line 953, in run\r\n    self._target(*self._args, **self._kwargs)\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py\", line 1515, in _readerthread\r\n    buffer.append(fh.read())\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\encodings\\cp1252.py\", line 23, in decode\r\n    return codecs.charmap_decode(input,self.errors,decoding_table)[0]\r\nUnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 93: character maps to <undefined>\r\nERROR: Unexpected error: 'NoneType' object has no attribute 'strip'\r\n"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "error",
+      "agent": "worker_html_validator_html_val",
+      "message": "LLM call failed after 3 attempts"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "error",
+      "agent": "worker_html_validator_html_val",
+      "message": "Atomic task execution failed: Model call failed: CLI command execution failed: CLI command failed: Exception in thread Thread-1 (_readerthread):\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\threading.py\", line 1016, in _bootstrap_inner\r\n    self.run()\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\threading.py\", line 953, in run\r\n    self._target(*self._args, **self._kwargs)\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py\", line 1515, in _readerthread\r\n    buffer.append(fh.read())\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\encodings\\cp1252.py\", line 23, in decode\r\n    return codecs.charmap_decode(input,self.errors,decoding_table)[0]\r\nUnicodeDecodeError: 'charmap' codec can't decode byte 0x8f in position 93: character maps to <undefined>\r\nERROR: Unexpected error: 'NoneType' object has no attribute 'strip'\r\n"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "warning",
+      "agent": "qa_lead_67535895",
+      "message": "Worker worker_html_validator_html_val failed task: Validate HTML structure and accessibility"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "error",
+      "agent": "system",
+      "message": "Task html_validation status changed to failed"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "info",
+      "agent": "system",
+      "message": "Task css_validation status changed to in_progress"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "Team Lead qa executing: Test CSS styling across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "QA task suitable for worker delegation: Test CSS styling across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "QA Team Lead delegating task to worker: Test CSS styling across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "Created qa_css_validator worker for task: Test CSS styling across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "info",
+      "agent": "worker_css_validator_css_vali",
+      "message": "Worker qa_css_validator executing: Test CSS styling across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755562778.272543,
+      "level": "info",
+      "agent": "worker_css_validator_css_vali",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755562798.285516,
+      "level": "warning",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed (attempt 1): Model call failed: CLI command execution failed: CLI command failed: Exception in thread Thread-1 (_readerthread):\r\nTraceback (most recent call last):\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\threading.py\", line 1016, in _bootstrap_inner\r\n    self.run()\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\threading.py\", line 953, in run\r\n    self._target(*self._args, **self._kwargs)\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\subprocess.py\", line 1515, in _readerthread\r\n    buffer.append(fh.read())\r\n  File \"C:\\Users\\jcushman\\AppData\\Local\\Programs\\Python\\Python310\\lib\\encodings\\cp1252.py\", line 23, in decode\r\n    return codecs.charmap_decode(input,self.errors,decoding_table)[0]\r\nUnicodeDecodeError: 'charmap' codec can't decode byte 0x9d in position 27: character maps to <undefined>\r\nERROR: Unexpected error: 'NoneType' object has no attribute 'strip'\r\n"
+    },
+    {
+      "timestamp": 1755562878.062965,
+      "level": "warning",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed (attempt 2): 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755562907.941861,
+      "level": "warning",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed (attempt 3): 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755562907.942864,
+      "level": "error",
+      "agent": "worker_css_validator_css_vali",
+      "message": "LLM call failed after 3 attempts"
+    },
+    {
+      "timestamp": 1755562907.942864,
+      "level": "error",
+      "agent": "worker_css_validator_css_vali",
+      "message": "Atomic task execution failed: 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755562907.942864,
+      "level": "warning",
+      "agent": "qa_lead_67535895",
+      "message": "Worker worker_css_validator_css_vali failed task: Test CSS styling across browsers and screen sizes"
+    },
+    {
+      "timestamp": 1755562907.942864,
+      "level": "error",
+      "agent": "system",
+      "message": "Task css_validation status changed to failed"
+    },
+    {
+      "timestamp": 1755562907.942864,
+      "level": "info",
+      "agent": "system",
+      "message": "Task js_validation status changed to in_progress"
+    },
+    {
+      "timestamp": 1755562907.943805,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "Team Lead qa executing: Test all JavaScript functionality and interactions"
+    },
+    {
+      "timestamp": 1755562907.943805,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "QA task suitable for worker delegation: Test all JavaScript functionality and interactions"
+    },
+    {
+      "timestamp": 1755562907.943805,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "QA Team Lead delegating task to worker: Test all JavaScript functionality and interactions"
+    },
+    {
+      "timestamp": 1755562907.943805,
+      "level": "info",
+      "agent": "qa_lead_67535895",
+      "message": "Created qa_js_validator worker for task: Test all JavaScript functionality and interactions"
+    },
+    {
+      "timestamp": 1755562907.943805,
+      "level": "info",
+      "agent": "worker_js_validator_js_valid",
+      "message": "Worker qa_js_validator executing: Test all JavaScript functionality and interactions"
+    },
+    {
+      "timestamp": 1755562907.943805,
+      "level": "info",
+      "agent": "worker_js_validator_js_valid",
+      "message": "Calling claude for frontend task"
+    },
+    {
+      "timestamp": 1755562933.241803,
+      "level": "warning",
+      "agent": "worker_js_validator_js_valid",
+      "message": "LLM call failed (attempt 1): 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755562952.146059,
+      "level": "warning",
+      "agent": "worker_js_validator_js_valid",
+      "message": "LLM call failed (attempt 2): 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755563022.067523,
+      "level": "warning",
+      "agent": "worker_js_validator_js_valid",
+      "message": "LLM call failed (attempt 3): 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755563022.068519,
+      "level": "error",
+      "agent": "worker_js_validator_js_valid",
+      "message": "LLM call failed after 3 attempts"
+    },
+    {
+      "timestamp": 1755563022.068519,
+      "level": "error",
+      "agent": "worker_js_validator_js_valid",
+      "message": "Atomic task execution failed: 'dict' object has no attribute 'tokensUsed'"
+    },
+    {
+      "timestamp": 1755563022.068519,
+      "level": "warning",
+      "agent": "qa_lead_67535895",
+      "message": "Worker worker_js_validator_js_valid failed task: Test all JavaScript functionality and interactions"
+    },
+    {
+      "timestamp": 1755563022.068519,
+      "level": "error",
+      "agent": "system",
+      "message": "Task js_validation status changed to failed"
+    },
+    {
+      "timestamp": 1755563022.069519,
+      "level": "info",
+      "agent": "parallel_orchestrator",
+      "message": "Execution metrics: 3/6 completed, 7.8min total, 3.8x speedup"
+    },
+    {
+      "timestamp": 1755563022.070518,
+      "level": "error",
+      "agent": "orchestrator",
+      "message": "Project failed to complete"
+    }
+  ]
+}

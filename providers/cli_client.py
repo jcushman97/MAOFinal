@@ -15,6 +15,7 @@ import tempfile
 
 from core.config import Config, ProviderConfig
 from core.logger import get_logger
+from core.ascii_guardrails import sanitize_for_cli
 
 logger = get_logger("cli_client")
 
@@ -88,7 +89,7 @@ class CLIClient:
             logger.debug(f"Parsed output (length={len(output)}): {output[:300]}...")
             
             return {
-                "output": output,
+                "response": output,
                 "metadata": {
                     "model": model_name,
                     "execution_time": result.get("execution_time", 0),
@@ -121,10 +122,16 @@ class CLIClient:
         import time
         start_time = time.time()
         
+        # Sanitize prompt for CLI compatibility (prevents Unicode encoding errors)
+        safe_prompt = sanitize_for_cli(prompt)
+        
         # Build command
-        cmd = provider_config.cmd + provider_config.extra_args + [prompt]
+        cmd = provider_config.cmd + provider_config.extra_args + [safe_prompt]
         
         logger.debug(f"Executing command: {' '.join(cmd[:2])} ...")  # Don't log full prompt
+        
+        if safe_prompt != prompt:
+            logger.debug("Prompt sanitized for CLI compatibility")
         
         try:
             # Execute with timeout
@@ -142,9 +149,15 @@ class CLIClient:
             
             execution_time = time.time() - start_time
             
-            # Decode output
-            stdout_text = stdout.decode('utf-8', errors='ignore')
-            stderr_text = stderr.decode('utf-8', errors='ignore')
+            # Decode output with proper encoding handling for Windows
+            try:
+                stdout_text = stdout.decode('utf-8')
+                stderr_text = stderr.decode('utf-8')
+            except UnicodeDecodeError:
+                # Fallback to Windows encoding with sanitization
+                stdout_text = sanitize_for_cli(stdout.decode('utf-8', errors='replace'))
+                stderr_text = sanitize_for_cli(stderr.decode('utf-8', errors='replace'))
+                logger.warning("Output sanitized due to encoding issues")
             
             logger.debug(f"Command completed in {execution_time:.2f}s with return code {process.returncode}")
             
@@ -235,7 +248,7 @@ class CLIClient:
                 timeout=30
             )
             
-            response = result["output"].lower()
+            response = result["response"].lower()
             success = "ok" in response or "hello" in response
             
             if success:

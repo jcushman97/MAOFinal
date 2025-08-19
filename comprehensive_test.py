@@ -5,7 +5,7 @@ Validates all phases of the Multi-Agent Orchestration System
 
 This script performs systematic testing across all implemented phases:
 - Phase 1: Basic PM functionality
-- Phase 2: Hierarchical delegation (PM → Team Lead)  
+- Phase 2: Hierarchical delegation (PM -> Team Lead)  
 - Phase 3: Worker delegation and QA optimizations
 - Phase 4: Parallel execution capabilities
 
@@ -109,7 +109,7 @@ class ComprehensiveTestSuite:
                 result.mark_failure(0.0, f"Test execution failed: {str(e)}")
                 self.results.append(result)
                 total_success = False
-                print(f"❌ {test_method.__name__} failed: {e}")
+                print(f"[FAIL] {test_method.__name__} failed: {e}")
                 
         # Generate comprehensive report
         self.generate_test_report()
@@ -122,7 +122,7 @@ class ComprehensiveTestSuite:
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Basic System Startup...")
+            print("\n[INFO] Testing Basic System Startup...")
             
             # Test configuration loading
             config = Config.load()
@@ -145,12 +145,12 @@ class ComprehensiveTestSuite:
                 "project_dir": str(config.project_dir)
             })
             
-            print(f"✅ Basic system startup completed in {duration:.2f}s")
+            print(f"[PASS] Basic system startup completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Basic system startup failed: {e}")
+            print(f"[FAIL] Basic system startup failed: {e}")
             
         self.results.append(result)
         
@@ -160,7 +160,7 @@ class ComprehensiveTestSuite:
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Phase 1: PM Functionality...")
+            print("\n[INFO] Testing Phase 1: PM Functionality...")
             
             # Use custom test directory
             config = Config.load()
@@ -184,22 +184,22 @@ class ComprehensiveTestSuite:
                 "objective": test_objective
             })
             
-            print(f"✅ Phase 1 PM functionality completed in {duration:.2f}s")
+            print(f"[PASS] Phase 1 PM functionality completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Phase 1 PM functionality failed: {e}")
+            print(f"[FAIL] Phase 1 PM functionality failed: {e}")
             
         self.results.append(result)
         
     async def test_phase2_hierarchical_delegation(self):
-        """Test Phase 2: PM → Team Lead delegation."""
+        """Test Phase 2: PM -> Team Lead delegation."""
         result = TestResult("test_phase2_hierarchical_delegation")
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Phase 2: Hierarchical Delegation...")
+            print("\n[INFO] Testing Phase 2: Hierarchical Delegation...")
             
             config = Config.load()
             config.project_dir = self.test_project_dir
@@ -226,22 +226,22 @@ class ComprehensiveTestSuite:
                 "teams_involved": ["frontend", "backend"]
             })
             
-            print(f"✅ Phase 2 hierarchical delegation completed in {duration:.2f}s")
+            print(f"[PASS] Phase 2 hierarchical delegation completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Phase 2 hierarchical delegation failed: {e}")
+            print(f"[FAIL] Phase 2 hierarchical delegation failed: {e}")
             
         self.results.append(result)
         
     async def test_phase3_worker_delegation(self):
-        """Test Phase 3: Team Lead → Worker delegation."""
+        """Test Phase 3: Team Lead -> Worker delegation."""
         result = TestResult("test_phase3_worker_delegation")
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Phase 3: Worker Delegation...")
+            print("\n[INFO] Testing Phase 3: Worker Delegation...")
             
             # Import worker classes to verify they exist
             from agents.frontend_workers import HTMLWorker, CSSWorker, JavaScriptWorker
@@ -267,12 +267,12 @@ class ComprehensiveTestSuite:
                 "worker_initialization": True
             })
             
-            print(f"✅ Phase 3 worker delegation completed in {duration:.2f}s")
+            print(f"[PASS] Phase 3 worker delegation completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Phase 3 worker delegation failed: {e}")
+            print(f"[FAIL] Phase 3 worker delegation failed: {e}")
             
         self.results.append(result)
         
@@ -282,7 +282,7 @@ class ComprehensiveTestSuite:
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Phase 3: QA Optimizations...")
+            print("\n[INFO] Testing Phase 3: QA Optimizations...")
             
             from agents.qa_workers import QAWorkerFactory
             from agents.qa_lead import QATeamLead
@@ -306,7 +306,7 @@ class ComprehensiveTestSuite:
             
             # Test timeout configuration
             assert hasattr(worker, 'execution_context'), "Worker should have execution context"
-            assert worker.execution_context.get('max_execution_time', 0) <= 180, "QA tasks should have timeout ≤ 3 minutes"
+            assert worker.execution_context.get('max_execution_time', 0) <= 180, "QA tasks should have timeout <= 3 minutes"
             
             duration = time.time() - start_time
             result.mark_success(duration, {
@@ -316,12 +316,12 @@ class ComprehensiveTestSuite:
                 "max_execution_time": worker.execution_context.get('max_execution_time', 0)
             })
             
-            print(f"✅ Phase 3 QA optimizations completed in {duration:.2f}s")
+            print(f"[PASS] Phase 3 QA optimizations completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Phase 3 QA optimizations failed: {e}")
+            print(f"[FAIL] Phase 3 QA optimizations failed: {e}")
             
         self.results.append(result)
         
@@ -331,7 +331,7 @@ class ComprehensiveTestSuite:
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Phase 4: Parallel Capabilities...")
+            print("\n[INFO] Testing Phase 4: Parallel Capabilities...")
             
             from core.parallel_orchestrator import ParallelOrchestrator
             from core.dependency_analyzer import DependencyAnalyzer
@@ -371,12 +371,12 @@ class ComprehensiveTestSuite:
                 "execution_modes": [m.value for m in ExecutionMode]
             })
             
-            print(f"✅ Phase 4 parallel capabilities completed in {duration:.2f}s")
+            print(f"[PASS] Phase 4 parallel capabilities completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Phase 4 parallel capabilities failed: {e}")
+            print(f"[FAIL] Phase 4 parallel capabilities failed: {e}")
             
         self.results.append(result)
         
@@ -386,7 +386,7 @@ class ComprehensiveTestSuite:
         start_time = time.time()
         
         try:
-            print("\n📋 Testing End-to-End Project Completion...")
+            print("\n[INFO] Testing End-to-End Project Completion...")
             
             config = Config.load()
             config.project_dir = self.test_project_dir
@@ -426,12 +426,12 @@ class ComprehensiveTestSuite:
                 "dry_run_successful": True
             })
             
-            print(f"✅ End-to-end project completion completed in {duration:.2f}s")
+            print(f"[PASS] End-to-end project completion completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ End-to-end project completion failed: {e}")
+            print(f"[FAIL] End-to-end project completion failed: {e}")
             
         self.results.append(result)
         
@@ -441,7 +441,7 @@ class ComprehensiveTestSuite:
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Error Recovery Mechanisms...")
+            print("\n[INFO] Testing Error Recovery Mechanisms...")
             
             config = Config.load()
             config.project_dir = self.test_project_dir
@@ -471,12 +471,12 @@ class ComprehensiveTestSuite:
                 "graceful_degradation": True
             })
             
-            print(f"✅ Error recovery mechanisms completed in {duration:.2f}s")
+            print(f"[PASS] Error recovery mechanisms completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Error recovery mechanisms failed: {e}")
+            print(f"[FAIL] Error recovery mechanisms failed: {e}")
             
         self.results.append(result)
         
@@ -486,7 +486,7 @@ class ComprehensiveTestSuite:
         start_time = time.time()
         
         try:
-            print("\n📋 Testing Configuration Management...")
+            print("\n[INFO] Testing Configuration Management...")
             
             # Test default configuration creation
             test_config_path = Path("test_config.json")
@@ -518,19 +518,19 @@ class ComprehensiveTestSuite:
                 "provider_routing": True
             })
             
-            print(f"✅ Configuration management completed in {duration:.2f}s")
+            print(f"[PASS] Configuration management completed in {duration:.2f}s")
             
         except Exception as e:
             duration = time.time() - start_time
             result.mark_failure(duration, str(e))
-            print(f"❌ Configuration management failed: {e}")
+            print(f"[FAIL] Configuration management failed: {e}")
             
         self.results.append(result)
         
     def generate_test_report(self):
         """Generate comprehensive test report."""
         print("\n" + "=" * 60)
-        print("📊 COMPREHENSIVE TEST REPORT")
+        print("[DATA] COMPREHENSIVE TEST REPORT")
         print("=" * 60)
         
         total_tests = len(self.results)
@@ -538,26 +538,26 @@ class ComprehensiveTestSuite:
         failed_tests = total_tests - passed_tests
         
         print(f"Total Tests: {total_tests}")
-        print(f"Passed: {passed_tests} ✅")
-        print(f"Failed: {failed_tests} ❌")
+        print(f"Passed: {passed_tests} [PASS]")
+        print(f"Failed: {failed_tests} [FAIL]")
         print(f"Success Rate: {(passed_tests/total_tests*100):.1f}%")
         
         if failed_tests > 0:
-            print(f"\n🚨 FAILED TESTS ({failed_tests}):")
+            print(f"\n[ALERT] FAILED TESTS ({failed_tests}):")
             for result in self.results:
                 if not result.success:
-                    print(f"  ❌ {result.test_name}")
+                    print(f"  [FAIL] {result.test_name}")
                     print(f"     Error: {result.error_message}")
                     if result.details:
                         print(f"     Details: {result.details}")
                         
-        print(f"\n✅ PASSED TESTS ({passed_tests}):")
+        print(f"\n[PASS] PASSED TESTS ({passed_tests}):")
         for result in self.results:
             if result.success:
-                print(f"  ✅ {result.test_name} ({result.duration:.2f}s)")
+                print(f"  [PASS] {result.test_name} ({result.duration:.2f}s)")
                 
         # Phase-specific analysis
-        print(f"\n📋 PHASE ANALYSIS:")
+        print(f"\n[INFO] PHASE ANALYSIS:")
         phase_results = {
             "Phase 1": [r for r in self.results if "phase1" in r.test_name.lower()],
             "Phase 2": [r for r in self.results if "phase2" in r.test_name.lower()],
@@ -570,26 +570,26 @@ class ComprehensiveTestSuite:
             if tests:
                 phase_passed = len([t for t in tests if t.success])
                 phase_total = len(tests)
-                status = "✅" if phase_passed == phase_total else "⚠️" if phase_passed > 0 else "❌"
+                status = "[PASS]" if phase_passed == phase_total else "[WARN]" if phase_passed > 0 else "[FAIL]"
                 print(f"  {status} {phase}: {phase_passed}/{phase_total} tests passed")
                 
         # Changes log
         if self.change_log:
-            print(f"\n📝 CHANGES MADE DURING TESTING:")
+            print(f"\n CHANGES MADE DURING TESTING:")
             for change in self.change_log:
-                print(f"  🔄 {change['timestamp']}: {change['type']} - {change['description']}")
+                print(f"  [PROGRESS] {change['timestamp']}: {change['type']} - {change['description']}")
                 
         # Recommendations
-        print(f"\n💡 RECOMMENDATIONS:")
+        print(f"\n[IDEA] RECOMMENDATIONS:")
         if failed_tests == 0:
-            print("  ✅ All tests passed! System is working according to PRD specifications.")
-            print("  ✅ No issues found. Safe to proceed with development.")
+            print("  [PASS] All tests passed! System is working according to PRD specifications.")
+            print("  [PASS] No issues found. Safe to proceed with development.")
         else:
-            print("  ⚠️  Some tests failed. Review failure details above.")
-            print("  ⚠️  Consider investigating failed components before proceeding.")
+            print("  [WARN]  Some tests failed. Review failure details above.")
+            print("  [WARN]  Consider investigating failed components before proceeding.")
             
         if self.change_log:
-            print("  📋 Changes were made during testing. Review change log above.")
+            print("  [INFO] Changes were made during testing. Review change log above.")
             
         # Save detailed report
         report_data = {
@@ -619,7 +619,7 @@ class ComprehensiveTestSuite:
         with open(report_file, 'w') as f:
             json.dump(report_data, f, indent=2)
             
-        print(f"\n📄 Detailed report saved to: {report_file}")
+        print(f"\n[DOC] Detailed report saved to: {report_file}")
 
 
 async def main():
@@ -630,17 +630,17 @@ async def main():
         success = await test_suite.run_all_tests()
         
         if success:
-            print("\n🎉 All tests completed successfully!")
+            print("\n[SUCCESS] All tests completed successfully!")
             return 0
         else:
-            print("\n⚠️ Some tests failed. See report above for details.")
+            print("\n[WARN] Some tests failed. See report above for details.")
             return 1
             
     except KeyboardInterrupt:
-        print("\n⏹️ Testing interrupted by user")
+        print("\n[STOP] Testing interrupted by user")
         return 130
     except Exception as e:
-        print(f"\n💥 Testing suite failed: {e}")
+        print(f"\n[ERROR] Testing suite failed: {e}")
         traceback.print_exc()
         return 1
 

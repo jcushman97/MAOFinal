@@ -1,0 +1,17 @@
+{
+  "projectId": "b14ad5dc-4d07-4549-8d03-2b134b3a34ae",
+  "objective": "Simple Colorful html website with simple js and css",
+  "createdAt": 1755566926.657287,
+  "updatedAt": 1755566926.657287,
+  "status": "planning",
+  "tasks": [],
+  "agents": {
+    "pm_001": {
+      "type": "pm",
+      "model": "claude",
+      "tokensUsed": 0,
+      "callCount": 0
+    }
+  },
+  "logs": []
+}

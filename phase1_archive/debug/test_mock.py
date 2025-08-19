@@ -23,7 +23,7 @@ logger = get_logger("test_mock")
 
 async def test_mock_system():
     """Test MAOS with mock Claude wrapper."""
-    print("🧪 Testing MAOS with Mock Claude Wrapper")
+    print("[TEST] Testing MAOS with Mock Claude Wrapper")
     print("=" * 50)
     
     try:
@@ -34,25 +34,25 @@ async def test_mock_system():
         mock_config_path = Path("providers/providers_mock.json")
         config = Config.load(mock_config_path)
         
-        print("✅ Mock configuration loaded")
+        print("[PASS] Mock configuration loaded")
         
         # Create orchestrator
         orchestrator = Orchestrator(config)
-        print("✅ Orchestrator initialized")
+        print("[PASS] Orchestrator initialized")
         
         # Test simple project
         test_objective = "Create a simple hello world Python script"
-        print(f"\n🚀 Starting test project: {test_objective}")
+        print(f"\n[START] Starting test project: {test_objective}")
         
         project_id = await orchestrator.start_project(test_objective)
-        print(f"✅ Project completed: {project_id}")
+        print(f"[PASS] Project completed: {project_id}")
         
         # Monitor the completed project
-        print(f"\n📊 Project Summary:")
+        print(f"\n[DATA] Project Summary:")
         success = await orchestrator.monitor_project(project_id)
         
         if success:
-            print("\n🎉 MAOS Mock Test PASSED!")
+            print("\n[SUCCESS] MAOS Mock Test PASSED!")
             print("The system is working correctly with mock responses.")
             print("\nTo use with real Claude CLI:")
             print("1. Install Claude CLI: npm install -g @anthropic-ai/claude-code")
@@ -60,11 +60,11 @@ async def test_mock_system():
             print("3. Use: python main.py 'Your project description'")
             return True
         else:
-            print("\n❌ Mock test failed during monitoring")
+            print("\n[FAIL] Mock test failed during monitoring")
             return False
             
     except Exception as e:
-        print(f"\n❌ Mock test failed: {e}")
+        print(f"\n[FAIL] Mock test failed: {e}")
         logger.error(f"Mock test error: {e}")
         return False
 
