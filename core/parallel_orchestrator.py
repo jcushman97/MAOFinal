@@ -405,21 +405,54 @@ class ParallelOrchestrator:
         """Fallback to sequential execution (original Phase 1-3 behavior)."""
         logger.info("Using sequential execution mode")
         
-        # Use original sequential logic
-        ready_tasks = project_state.get_ready_tasks()
+        # Use original sequential logic with iteration until all tasks complete
+        max_iterations = 100  # Prevent infinite loops
+        iteration = 0
         
-        for task in ready_tasks:
+        while iteration < max_iterations:
+            # Get ready tasks (queued with all dependencies complete)
+            ready_tasks = project_state.get_ready_tasks()
+            
+            if not ready_tasks:
+                # No more ready tasks, check if we're done
+                if self._all_tasks_complete_or_failed(project_state):
+                    break
+                else:
+                    # Might be a dependency deadlock
+                    logger.warning("No ready tasks found but project not complete")
+                    break
+            
+            # Execute first ready task (sequential execution)
+            task = ready_tasks[0]
+            logger.info(f"Executing task: {task.description}")
+            
+            # Update task status to in progress
             project_state.update_task_status(task.id, TaskStatus.IN_PROGRESS)
             
-            agent = await self._get_team_agent(task.team or "general", project_state)
-            success = await agent.execute_task(task)
-            
-            if success:
-                project_state.update_task_status(task.id, TaskStatus.COMPLETE)
-                self.execution_metrics.completed_tasks += 1
-            else:
-                project_state.update_task_status(task.id, TaskStatus.FAILED)
+            try:
+                # Get appropriate agent for task
+                agent = await self._get_team_agent(task.team or "general", project_state)
+                success = await agent.execute_task(task)
+                
+                if success:
+                    project_state.update_task_status(task.id, TaskStatus.COMPLETE)
+                    self.execution_metrics.completed_tasks += 1
+                    logger.info(f"Task completed successfully: {task.description}")
+                else:
+                    project_state.update_task_status(task.id, TaskStatus.FAILED, "Task execution failed")
+                    self.execution_metrics.failed_tasks += 1
+                    logger.error(f"Task failed: {task.description}")
+                
+            except Exception as e:
+                project_state.update_task_status(task.id, TaskStatus.FAILED, str(e))
                 self.execution_metrics.failed_tasks += 1
+                logger.error(f"Task execution error: {e}")
+            
+            iteration += 1
+        
+        if iteration >= max_iterations:
+            logger.error("Maximum task execution iterations reached")
+            return False
         
         return self.execution_metrics.failed_tasks == 0
     
@@ -443,6 +476,13 @@ class ParallelOrchestrator:
     def _all_groups_completed(self) -> bool:
         """Check if all groups have completed (successfully or failed)."""
         return len(self.active_groups) == 0
+    
+    def _all_tasks_complete_or_failed(self, project_state: ProjectState) -> bool:
+        """Check if all tasks are either COMPLETE or FAILED."""
+        return all(
+            task.status in [TaskStatus.COMPLETE, TaskStatus.FAILED] 
+            for task in project_state.tasks
+        )
     
     def _log_execution_summary(self):
         """Log summary of parallel execution metrics."""
